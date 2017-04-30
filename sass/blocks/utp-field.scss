@@ -1,0 +1,7 @@
+.utp-field {
+  width: 100%;
+  background-color: $section-color;
+}
+.utp-field__wrapper {
+  @include section-width;
+}

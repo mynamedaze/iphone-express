@@ -1,0 +1,7 @@
+.call-master {
+  width: 100%;
+  background-color: $section-color;
+}
+.call-master__wrapper {
+  @include section-width;
+}

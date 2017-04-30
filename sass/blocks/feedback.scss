@@ -1,0 +1,7 @@
+.feedback {
+  width: 100%;
+  background-color: $section-color;
+}
+.feedback__wrapper {
+  @include section-width;
+}

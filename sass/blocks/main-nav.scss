@@ -1,0 +1,31 @@
+.main-nav {
+  background-color: mediumseagreen;
+  margin-left: 10px;
+  margin-right: auto;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    width: 520px;
+  }
+}
+.main-nav__list {
+  display: flex;
+  
+  flex-direction: row;
+  padding-left: 0px;
+}
+.main-nav__item {
+  text-align: center;
+  background-color: blue;
+  margin-right: 2px;
+  @media #{$min-tablet-width} {
+    width: 75px;
+  }
+  @media #{$min-desktop-width} {
+    width: 80px;
+  }
+}
+.main-nav__item-link {
+  background-color: orange;
+}

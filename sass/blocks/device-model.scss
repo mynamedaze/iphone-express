@@ -1,0 +1,7 @@
+.device-model {
+  width: 100%;
+  background-color: $section-color;
+}
+.device-model__wrapper {
+  @include section-width;
+}

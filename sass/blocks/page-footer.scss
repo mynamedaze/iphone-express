@@ -1,0 +1,7 @@
+.page-footer {
+  width: 100%;
+  background-color: $section-color;
+}
+.page-footer__wrapper {
+  @include section-width;
+}

@@ -1,0 +1,7 @@
+.partners {
+  width: 100%;
+  background-color: $section-color;
+}
+.partners__wrapper {
+  @include section-width;
+}

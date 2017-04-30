@@ -1,0 +1,7 @@
+.we-fast {
+  width: 100%;
+  background-color: $section-color;
+}
+.we-fast__wrapper {
+  @include section-width;
+}
