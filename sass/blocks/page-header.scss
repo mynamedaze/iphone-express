@@ -1,6 +1,7 @@
 .page-header {
   width: 100%;
   background-color: $section-color;
+  color: $text-alternative-color;
 }
 .page-header__wrapper {
   @include section-width;
@@ -55,4 +56,7 @@
   @media #{$min-desktop-width} {
     max-width: 340px;
   }
+}
+.page-header__contact-number {
+  color: $text-alternative-color;
 }

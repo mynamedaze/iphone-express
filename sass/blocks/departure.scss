@@ -1,0 +1,7 @@
+.departure {
+  width: 100%;
+  background-color: $section-color;
+}
+.departure__wrapper {
+  @include section-width;
+}

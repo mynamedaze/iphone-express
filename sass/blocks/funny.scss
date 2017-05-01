@@ -1,0 +1,7 @@
+.funny {
+  width: 100%;
+  background-color: $section-color;
+}
+.funny__wrapper {
+  @include section-width;
+}
