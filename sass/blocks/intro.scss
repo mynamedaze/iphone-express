@@ -5,3 +5,15 @@
 .intro__wrapper {
   @include section-width;
 }
+.intro__title {
+  font-weight: 700;
+  @media #{$max-mobile-width} {
+    font-size: 3rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 4.5rem;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 7.2rem;
+  }
+}
