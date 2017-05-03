@@ -1,19 +1,217 @@
 .intro {
   width: 100%;
+  box-sizing: border-box;
   background-color: $section-color;
+  @media #{$max-mobile-width} {
+    margin-top: -130px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: -70px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: -123px;
+  }
 }
 .intro__wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @include section-width;
+  @media #{$max-mobile-width} {
+    min-height: 389px;
+    padding-top: 145px;
+  }
+  @media #{$min-tablet-width} {
+    min-height: 381px;
+    padding-top: 98px;
+  }
+  @media #{$min-desktop-width} {
+    min-height: 674px;
+    padding-top: 182px;
+  }
 }
 .intro__title {
+  margin-top: 0px;
   font-weight: 700;
+  text-align: center;
+  color: $text-alt-color;
+  margin-bottom: 0;
   @media #{$max-mobile-width} {
     font-size: 3rem;
+    line-height: 3.1rem;
+    width: 265px;
+    margin-bottom: 8px;
   }
   @media #{$min-tablet-width} {
     font-size: 4.5rem;
+    width: 460px;
+    margin-bottom: 20px;
   }
   @media #{$min-desktop-width} {
     font-size: 7.2rem;
+    width: 750px;
+    margin-bottom: 40px;
+  }
+}
+.intro__utp-item {
+  background-color: #AF4035;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    cursor: pointer;
+    min-height: 140px;
+  }
+  @media #{$min-tablet-width} {
+    min-height: 105px;
+  }
+  @media #{$min-desktop-width} {
+    min-height: 160px;
+  }
+}
+.intro__utp-item-text {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #7BA05B;
+  color: $text-alt-color;
+  text-align: center;
+  @media #{$max-mobile-width} {
+    padding-top: 77px;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+    max-width: 235px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    padding-top: 57px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    padding-top: 100px;
+  }
+}
+.intro__utp-item-text::after {
+  position: absolute;
+  content: "";
+  background-color: orchid;
+  left: 50%;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.intro__utp-item-text--1 {
+  @media #{$min-tablet-width} {
+    max-width: 200px;
+  }
+  @media #{$min-desktop-width} {
+    max-width: 360px;
+  }
+}
+.intro__utp-item-text--1::after {
+  background-image: url("../img/30min.svg");
+  @media #{$max-mobile-width} {
+    width: 48px;
+    height: 66px;
+    transform: translateX(-24px);
+    background-size: 48px 66px;
+  }
+  @media #{$min-tablet-width} {
+    width: 36px;
+    height: 48px;
+    transform: translateX(-18px);
+    background-size: 36px 48px;
+  }
+  @media #{$min-desktop-width} {
+    width: 64px;
+    height: 84px;
+    transform: translateX(-32px);
+    background-size: 64px 84px;
+  }
+}
+.intro__utp-item-text--2 {
+  @media #{$min-tablet-width} {
+    max-width: 137px;
+  }
+  @media #{$min-desktop-width} {
+    max-width: 290px;
+  }
+}
+.intro__utp-item-text--2::after {
+  background-image: url("../img/20min.svg");
+  @media #{$max-mobile-width} {
+    width: 66px;
+    height: 66px;
+    transform: translateX(-33px);
+    background-size: 66px 66px;
+  }
+  @media #{$min-tablet-width} {
+    width: 48px;
+    height: 48px;
+    transform: translateX(-24px);
+    background-size: 48px 48px;
+  }
+  @media #{$min-desktop-width} {
+    width: 84px;
+    height: 84px;
+    transform: translateX(-42px);
+    background-size: 84px 84px;
+  }
+}
+.intro__utp-item-text--3 {
+  @media #{$min-tablet-width} {
+    max-width: 110px;
+  }
+  @media #{$min-desktop-width} {
+    max-width: 280px;
+  }
+}
+.intro__utp-item-text--3::after {
+  background-image: url("../img/quoliti.svg");
+  @media #{$max-mobile-width} {
+    width: 60px;
+    height: 66px;
+    transform: translateX(-33px);
+    background-size: 60px 66px;
+  }
+  @media #{$min-tablet-width} {
+    width: 42px;
+    height: 48px;
+    transform: translateX(-24px);
+    background-size: 42px 48px;
+  }
+  @media #{$min-desktop-width} {
+    width: 77px;
+    height: 84px;
+    transform: translateX(-42px);
+    background-size: 77px 84px;
+  }
+}
+.intro__utp-item-bold {
+  font-weight: 700;
+  color: $button-color;
+}
+.call-master__form-field {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.intro__form-input {
+  @media #{$min-tablet-width} {
+    width: 175px;
+    height: 31px;
+    border-radius: 31px;
+    border-width: 0;
+  }
+  @media #{$min-desktop-width} {
+    width: 310px;
+    height: 55px
   }
 }

@@ -9,14 +9,17 @@
   background-color: #ffffff;
   content: "";
   position: absolute;
-  height: 2px;
   left: 0;
   @media #{$max-mobile-width} {
-    top: 71px;
+    bottom: 58px;
+    height: 1px;
   }
   @media #{$min-tablet-width} {
-    
     bottom: 3px;
+    height: 1px;
+  }
+  @media #{$min-desktop-width} {
+    height: 2px;
   }
 }
 .page-header__wrapper {

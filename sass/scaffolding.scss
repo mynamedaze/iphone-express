@@ -27,3 +27,10 @@ body {
   font-weight: 500;
   margin: 0px;
 }
+input {
+  box-sizing: border-box;
+}
+input:focus {
+  outline-width: 0;
+  border-width: 0;
+}

@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Выездной ремонт Apple iPhone и iPad. Сервисный центр Айфон в Краснодаре. Iphone Express.</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script type="text/javascript" src="js/formatter.min.js"></script>
 </head>
 <body>
   <header class="page-header">
@@ -38,12 +37,17 @@
   </header>
   <section class="intro">
     <div class="intro__wrapper">
-      <h2 class="intro__title">Выездной ремонт Вашего iPhone и iPad</h2>
-      <ul class="intro__utp-field">
-        <li class="intro__utp-item">Прибытие мастера в течение <span>30 минут</span> в любую точку Краснодара</li>
-        <li class="intro__utp-item">Квалифицированный ремонт при вас за <span>20 минут</span></li>
-        <li class="intro__utp-item">Качественные комплектующие <span>с гарантией</span></li>
-      </ul>
+      <h2 class="intro__title">Выездной ремонт вашего iPhone и iPad</h2>
+      <div class="intro__utp-list  owl-carousel  owl-theme">
+        <div class="intro__utp-item"><span class="intro__utp-item-text  intro__utp-item-text--1">Прибытие мастера в течение<br><span class="intro__utp-item-bold">30 минут</span> в любую точку Краснодара</span></div>
+        <div class="intro__utp-item"><span class="intro__utp-item-text  intro__utp-item-text--2">Квалифицированный ремонт при вас за <span class="intro__utp-item-bold">20 минут</span></span></div>
+        <div class="intro__utp-item"><span class="intro__utp-item-text  intro__utp-item-text--3">Качественные комплектующие <span class="intro__utp-item-bold">с гарантией</span></span></div>
+      </div>
+      <form action="#" method="post" class="call-master__form-field">
+        <input type="text" class="intro__form-input  intro__form-input--name" name="firstname" id="firstname-field" placeholder="Имя" required>
+        <input type="tel" class="intro__form-input  intro__form-input--phone" name="telephone" id="telephone-field" placeholder="Телефон" required>
+        <input type="submit" class="intro__form-input  intro__form-input--submit" name="callback-submit" value="Вызвать мастера">
+      </form>
     </div>
   </section>
   <section class="device-model">
@@ -174,10 +178,10 @@
   <section class="call-master">
     <div class="call-master__wrapper">
       <h2 class="call-master__title">Вызовите мастера в любой день, мы работаем без выходных!</h2>
-      <form action="" class="call-master__form-field">
+      <form action="" class="call-master__form-field" method="post">
         <input type="text" class="call-master__form-name" name="firstname" id="firstname-field" placeholder="Имя" required>
         <input type="tel" class="call-master__form-phone" name="telephone" id="telephone-field" placeholder="Телефон" required>
-        <input type="submit" name="callback-submit" value="Вызвать мастера">
+        <input type="submit" class="call-master__form-submit" name="callback-submit" value="Вызвать мастера">
       </form>
       <div class="callmaster__contact-field">
         <div class="callmaster__phone-field">
@@ -204,6 +208,9 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/formatter.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

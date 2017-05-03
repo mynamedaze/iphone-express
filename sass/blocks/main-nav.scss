@@ -56,12 +56,13 @@
   }
 }
 .main-nav__item:hover::after {
-  height: 3px;
   @media #{$min-tablet-width} {
     top: 67px;
+    height: 2px;
   }
   @media #{$min-desktop-width} {
     top: 120px;
+    height: 3px;
   }
 }
 .main-nav__item-link {
