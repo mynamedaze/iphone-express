@@ -4,9 +4,12 @@ var formatted = new Formatter(document.getElementById('telephone-field'), {
 });
 
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
+  $(".intro__utp-list").owlCarousel({
     responsive:{
         0:{
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
             items:1
         },
         768:{
