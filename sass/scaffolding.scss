@@ -10,6 +10,7 @@ ul {
 }
 a {
   text-decoration: none;
+  font-family: $font-main;
 }
 .visually-hidden{
   position: absolute;
@@ -28,7 +29,7 @@ body {
   margin: 0px;
 }
 input {
-  font-family: "proxima_nova", "Arial", sans-serif;
+  font-family: $font-main;
   font-weight: 500;
   box-sizing: border-box;
   border-width: 0;
@@ -73,43 +74,12 @@ input:focus {
   border-width: 0;
 }
 button {
-  transition: box-shadow 0.2s ease 0ms;
-  font-family: "proxima_nova", "Arial", sans-serif;
+  transition: all 0.2s ease 0ms;
+  font-family: $font-main;
   font-weight: 500;
   border-width: 0;
-  @media #{$max-mobile-width} {
-    box-shadow: 0 0 0 4px $button-border-color;
-  }
-  @media #{$min-tablet-width} {
-    box-shadow: 0 0 0 3px $button-border-color;
-  }
-  @media #{$min-desktop-width} {
-    box-shadow: 0 0 0 5px $button-border-color;
-  }
   box-sizing: border-box;
   cursor: pointer;
-}
-button:hover {
-  @media #{$max-mobile-width} {
-    box-shadow: 0 0 0 4px $button-border-color-hover;
-  }
-  @media #{$min-tablet-width} {
-    box-shadow: 0 0 0 3px $button-border-color-hover;
-  }
-  @media #{$min-desktop-width} {
-    box-shadow: 0 0 0 5px $button-border-color-hover;
-  }
-}
-button:active {
-  @media #{$max-mobile-width} {
-    box-shadow: 0 0 0 6px $button-border-color-hover;
-  }
-  @media #{$min-tablet-width} {
-    box-shadow: 0 0 0 5px $button-border-color-hover;
-  }
-  @media #{$min-desktop-width} {
-    box-shadow: 0 0 0 7px $button-border-color-hover;
-  }
 }
 button:focus {
   outline-width: 0;

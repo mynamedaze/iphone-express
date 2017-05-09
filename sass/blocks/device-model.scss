@@ -4,4 +4,61 @@
 }
 .device-model__wrapper {
   @include section-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.device-model__toggle {
+  position: relative;
+  background-color: $toggle-color;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    width: 184px;
+    height: 48px;
+    border-radius: 48px;
+    border: solid 3px $button-color;
+  }
+  @media #{$min-tablet-width} {
+    width: 160px;
+    height: 42px;
+    border-radius: 42px;
+    border: solid 2px $button-color;
+  }
+  @media #{$min-desktop-width} {
+    width: 234px;
+    height: 62px;
+    border-radius: 62px;
+    border: solid 3px $button-color;
+  }
+}
+.device-model__button {
+  position: absolute;
+  background-color: $toggle-color;
+  @media #{$max-mobile-width} {
+    width: 94px;
+    height: 42px;
+    border-radius: 42px;
+  }
+  @media #{$min-tablet-width} {
+    width: 83px;
+    height: 38px;
+    border-radius: 38px;
+  }
+    @media #{$min-desktop-width} {
+    width: 121px;
+    height: 56px;
+    border-radius: 56px;
+  }
+}
+.device-model__button--active {
+  background-color: $toggle-color-active;
+  z-index: 2;
+}
+.device-model__button--iphone {
+  top: 0;
+  left: 0;
+}
+.device-model__button--ipad {
+  top: 0;
+  right: 0;
 }

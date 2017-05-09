@@ -298,8 +298,19 @@
     height: 45px;
     border-radius: 45px;
     background-color: $button-color;
+    box-shadow: 0 0 0 4px $button-border-color;
   }
   @media #{$min-tablet-width} {
     display: none;
+  }
+}
+.intro__call-button:hover {
+  @media #{$max-mobile-width} {
+    box-shadow: 0 0 0 4px $button-border-color-hover;
+  }
+}
+.intro__call-button:active {
+  @media #{$max-mobile-width} {
+    box-shadow: 0 0 0 6px $button-border-color-hover;
   }
 }
