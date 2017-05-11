@@ -6,8 +6,15 @@
   @include section-width;
   display: flex;
   justify-content: space-between;
+  @media #{$max-mobile-width} {
+    flex-direction: column;
+  }
 }
-
+.page-footer__social-list {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+}
 .page-footer__logo-field {
   flex-shrink: 0;
   @media #{$max-mobile-width} {

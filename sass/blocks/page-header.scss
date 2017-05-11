@@ -27,6 +27,7 @@
   @include section-width;
   display: flex;
   justify-content: space-between;
+  background-color: #997A8D;
   @media #{$max-mobile-width} {
     flex-wrap: wrap;
     min-height: 130px;

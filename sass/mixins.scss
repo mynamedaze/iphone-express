@@ -3,7 +3,6 @@
   margin-right: auto;
   box-sizing: border-box;
   min-height: 10px;
-  background-color: red;
   @media #{$max-mobile-width} {
     max-width: $max-mobile-wrapper;
     padding-left: 10px;

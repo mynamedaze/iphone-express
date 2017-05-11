@@ -10,7 +10,6 @@ ul {
 }
 a {
   text-decoration: none;
-  font-family: $font-main;
 }
 .visually-hidden{
   position: absolute;
@@ -27,6 +26,7 @@ body {
   font-family: $font-main;
   font-weight: 500;
   margin: 0px;
+  color: $text-main-color;
 }
 input {
   font-family: $font-main;

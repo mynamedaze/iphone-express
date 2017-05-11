@@ -4,4 +4,37 @@
 }
 .departure__wrapper {
   @include section-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: darkorange;
+}
+.departure__title {
+  text-align: center;
+  margin-top: 0;
+  font-weight: 700;
+  @media #{$max-mobile-width} {
+    font-size: 20px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 27px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 48px;
+  }
+}
+.departure__text {
+  text-align: center;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 16px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 20px;
+  }
 }
