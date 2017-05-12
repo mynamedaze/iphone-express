@@ -266,13 +266,13 @@
     width: 175px;
     height: 31px;
     border-radius: 31px;
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-top: 18px;
   }
   @media #{$min-desktop-width} {
     width: 310px;
     height: 55px;
-    font-size: 22px;
+    font-size: 2.2rem;
     margin-top: 30px;
   }
 }
@@ -294,7 +294,7 @@
 .intro__call-button {
   @media #{$max-mobile-width} {
     margin-top: 25px;
-    font-size: 19px;
+    font-size: 1.9rem;
     width: 255px;
     height: 45px;
     border-radius: 45px;
