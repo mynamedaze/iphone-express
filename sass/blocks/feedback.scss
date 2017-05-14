@@ -4,4 +4,110 @@
 }
 .feedback__wrapper {
   @include section-width;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: mediumaquamarine;
+  align-items: center;
+  position: relative;
+}
+.feedback__author-list {
+  display: flex;
+  background-color: orange;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    flex-direction: column;
+  }
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      width: 365px;
+      height: 230px;
+    }
+  }
+  @media #{$min-desktop-width} {
+    flex-wrap: wrap;
+  }
+}
+.feedback__prev {
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+        position: absolute;
+        z-index: 3;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+  }
+}
+.feedback__next {
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+        position: absolute;
+        z-index: 3;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        right: 0px;
+        top: 0px;
+    }
+  }
+}
+.feedback__author {
+  transition: transform 0.2s ease;
+  background-color: lawngreen;
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+      flex-shrink: 0;
+      width: 355px;
+      height: 220px;
+      margin-left: 5px;
+      margin-right: 0;
+      margin-top: 5px;
+    }
+  }
+}
+.feedback__author--disabled {
+  display: none;
+}
+
+.feedback__dots-field {
+    background-color: burlywood;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+      display: flex;
+      padding-left: 0;
+      justify-content: center;
+    }
+  }
+  @media #{$min-desktop-width} {
+    display: none;
+  }
+}
+.feedback__dot {
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+      width: 8px;
+      height: 8px;
+      margin-left: 5px;
+      box-sizing: border-box;
+      border: 1px solid $feeddots-color;
+      border-radius: 50%;
+    }
+  }
+}
+.feedback__dot:first-child {
+  margin-left: 0;
+}
+.feedback__dot--active {
+  background-color: $feeddots-color;
+}
+.feedback__dot--disabled {
+  display: none;
 }

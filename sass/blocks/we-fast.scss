@@ -67,6 +67,7 @@
   }
 }
 .we-fast__list {
+  @include list-paddings;
   display: flex;
   padding-left: 0;
   background-color: gold;
@@ -81,14 +82,10 @@
   @media #{$min-tablet-width} {
     margin-top: -37px;
     justify-content: space-between;
-    padding-left: 70px;
-    padding-right: 70px;
     padding-top: 82px;
   }
   @media #{$min-desktop-width} {
     margin-top: -21px;
-    padding-left: 130px;
-    padding-right: 130px;
   }
 }
 .we-fast__item {

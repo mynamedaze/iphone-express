@@ -23,3 +23,23 @@
   margin-left: auto;
   margin-right: auto;
 }
+@mixin list-paddings() {
+  @media #{$min-tablet-width} {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+@mixin list-margins() {
+  @media #{$min-tablet-width} {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 130px;
+    margin-right: 130px;
+  }
+}

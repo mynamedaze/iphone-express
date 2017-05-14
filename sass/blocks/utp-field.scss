@@ -21,7 +21,7 @@
   }
   @media #{$min-desktop-width} {
     padding-top: 15px;
-    padding-bottom: 92px;
+    padding-bottom: 95px;
   }
 }
 .utp-field__title {
@@ -55,6 +55,7 @@
   padding-left: 0;
   display: flex;
   box-sizing: border-box;
+  @include list-paddings;
   @media #{$max-mobile-width} {
     flex-direction: column;
     margin-top: 0;
@@ -63,12 +64,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: -11px;
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-  @media #{$min-desktop-width} {
-    padding-left: 130px;
-    padding-right: 130px;
   }
 }
 
@@ -106,14 +101,14 @@
   }
   @media #{$min-tablet-width} {
     left: 50%;
-    top: -65px;
+    top: -72px;
     width: 70px;
     height: 70px;
     transform: translateX(-35px);
   }
   @media #{$min-desktop-width} {
     left: 50%;
-    top: -90px;
+    top: -100px;
     width: 98px;
     height:98px;
     transform: translateX(-49px);
