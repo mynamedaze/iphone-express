@@ -92,7 +92,7 @@
   content: "";
   background-color: mediumpurple;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
   @media #{$max-mobile-width} {
     left: 12px;
     top: -10px;

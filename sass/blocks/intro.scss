@@ -158,7 +158,7 @@
   left: 50%;
   top: 0px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
 }
 .intro__utp-item-text--1 {
   @media #{$min-tablet-width} {
@@ -264,20 +264,21 @@
 .intro__form-input {
   @media #{$min-tablet-width} {
     width: 175px;
-    height: 31px;
-    border-radius: 31px;
+    height: 3.1rem;
+    border-radius: 3.1rem;
     font-size: 1.4rem;
     margin-top: 18px;
   }
   @media #{$min-desktop-width} {
     width: 310px;
-    height: 55px;
+    height: 5.5rem;
     font-size: 2.2rem;
     margin-top: 30px;
   }
 }
 .intro__form-input--info {
   color: $input-placeholder-color;
+  font-weight: 300;
   @media #{$min-tablet-width} {
     padding-left: 18px;
     padding-right: 18px;
@@ -296,8 +297,8 @@
     margin-top: 25px;
     font-size: 1.9rem;
     width: 255px;
-    height: 45px;
-    border-radius: 45px;
+    height: 4.5rem;
+    border-radius: 4.5rem;
     background-color: $button-color;
     box-shadow: 0 0 0 4px $button-border-color;
   }

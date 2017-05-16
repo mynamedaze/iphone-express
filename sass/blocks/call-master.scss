@@ -3,5 +3,195 @@
   background-color: $section-color;
 }
 .call-master__wrapper {
+  background-color: darkkhaki;
   @include section-width;
+  box-sizing: border-box;
+  color: $text-alt-color;
+  @media #{$max-mobile-width} {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 42px;
+    padding-bottom: 51px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 76px;
+    padding-bottom: 101px;
+  }
+}
+.call-master__title {
+  font-weight: 700;
+  margin-top: 0;
+  text-align: center;
+  @media #{$max-mobile-width} {
+    font-size: 2.6rem;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 2.7rem;
+    width: 443px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 4.8rem;
+    width: 770px;
+  }
+}
+.call-master__form-field {
+  background-color: orange;
+  box-sizing: border-box;
+  display: flex;
+  @media #{$max-mobile-width} {
+    flex-direction: column;
+    max-width: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 51px;
+  }
+  @media #{$min-tablet-width} {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 344px;
+    margin-top: 17px;
+  }
+  @media #{$min-desktop-width} {
+    width: 600px;
+    margin-top: 27px;
+  }
+}
+.call-master__input {
+  color: $input-placeholder-color;
+  flex-shrink: 0;
+  @media #{$max-mobile-width} {
+    font-size: 2.2rem;
+    height: 5.6rem;
+    border-radius: 5.6rem;
+    margin-bottom: 28px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.4rem;
+    height: 3.1rem;
+    border-radius: 3.1rem;
+    width: 159px;
+  }
+  @media #{$min-desktop-width} {
+    width: 280px;
+    height: 5.5rem;
+    border-radius: 5.5rem;
+    font-size: 2.3rem;
+  }
+}
+.call-master__input--info {
+  font-weight: 300;
+}
+.call-master__input[type="text"],
+.call-master__input[type="tel"] {
+  @media #{$max-mobile-width} {
+    padding-left: 37px;
+    padding-right: 37px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+}
+.call-master__input--submit {
+  background-color: $button-color;
+  color: $text-main-color;
+  @media #{$min-tablet-width} {
+    margin-top: 28px;
+    width: 170px;
+  }
+  @media #{$min-desktop-width} {
+    width: 310px;
+    margin-top: 44px;
+  }
+}
+.callmaster__contact-field {
+  text-align: center;
+  background-color: orchid;
+  position: relative;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    width: 170px;
+    margin-top: 40px;
+  }
+  @media #{$min-desktop-width} {
+    width: 610px;
+    justify-content: space-between;
+    margin-top: 102px;
+  }
+}
+.callmaster__contact-field::after {
+  @media #{$min-desktop-width} {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 80px;
+    background-color: $bg-main-color;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-1px);
+  }
+}
+.callmaster__phone-field {
+  @media #{$min-tablet-width} {
+    display: flex;
+    flex-direction: column;
+    @media #{$min-desktop-width} {
+      width: 255px;
+      text-align: right;
+    }
+  }
+}
+.callmaster__phone-number {
+  color: $text-alt-color;
+  @media #{$min-tablet-width} {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  @media #{$min-desktop-width} {
+    font-weight: 500;
+    font-size: 3.3rem;
+  }
+}
+.callmaster__phone-apps {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  @media #{$min-tablet-width} {
+    margin-top: 8px;
+  }
+}
+.callmaster__description-field {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+      display: none;
+    }
+  }
+  @media #{$min-desktop-width} {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    text-align: left;
+  }
+}
+.callmaster__description-title {
+  @media #{$min-desktop-width} {
+    font-size: 3.3rem;
+    text-transform: uppercase;
+  }
+}
+.callmaster__description-text {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }

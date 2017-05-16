@@ -1,9 +1,3 @@
-'use strict';
-var formatted = new Formatter(document.getElementById('telephone-field'), {
-  'pattern': '+7 ({{999}}) {{999}}-{{9999}}',
-  'persistent': true
-});
-
 $(document).ready(function(){
   $(".intro__utp-list").owlCarousel({
     responsive:{
@@ -26,6 +20,7 @@ $(document).ready(function(){
     }
   });
 });
+
 var authors = document.getElementsByClassName('feedback__author');
 authors = Array.prototype.slice.call(authors);
 
@@ -61,7 +56,6 @@ $(prevFeed).click(function() {
         $(dots[-count]).addClass('feedback__dot--active');
         $(authors).css({'transform' : 'translateX(' + (count * translate) + 'px)'});
     }
-    console.log(count);
 })
 $(nextFeed).click(function() {
     if (count > -(authorsCountLite - 1)) {
@@ -69,7 +63,6 @@ $(nextFeed).click(function() {
         --count;
         $(dots[-count]).addClass('feedback__dot--active');
         $(authors).css({'transform' : 'translateX(' + (count * translate) + 'px)'});
-        console.log(count);
     }
 
 })
@@ -77,6 +70,30 @@ $(nextFeed).click(function() {
 /*догружаем блоки при нажатии на "больше отзывов"*/
 $(seeMore).click(function() {
     $(authors).removeClass('feedback__author--disabled');
+    $(authors).removeClass('feedback__author--tablet-plus');
     $(dots).removeClass('feedback__dot--disabled');
+    $(seeMore).addClass('feedback__more--active');
     authorsCountLite = authorsCount;
-})
+});
+
+/*переключение тогглов интро*/
+var introTogglePhone = document.getElementsByClassName('device-model__button--iphone');
+var introTogglePad = document.getElementsByClassName('device-model__button--ipad');
+
+var modelListPhone = document.getElementsByClassName('device-model__model-list--phone');
+var modelListPad = document.getElementsByClassName('device-model__model-list--pad');
+
+$(introTogglePhone).click(function() {
+    $(introTogglePhone).addClass('device-model__button--active');
+    $(introTogglePad).removeClass('device-model__button--active');
+
+    $(modelListPhone).removeClass('disable');
+    $(modelListPad).addClass('disable');
+});
+$(introTogglePad).click(function() {
+    $(introTogglePhone).removeClass('device-model__button--active');
+    $(introTogglePad).addClass('device-model__button--active');
+
+    $(modelListPhone).addClass('disable');
+    $(modelListPad).removeClass('disable');
+});

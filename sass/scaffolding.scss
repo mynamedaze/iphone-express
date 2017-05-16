@@ -34,6 +34,9 @@ input {
   box-sizing: border-box;
   border-width: 0;
   transition: box-shadow 0.2s ease 0ms;
+}
+input[type="submit"] {
+  cursor: pointer;
   @media #{$max-mobile-width} {
     box-shadow: 0 0 0 4px $button-border-color;
   }
@@ -43,9 +46,6 @@ input {
   @media #{$min-desktop-width} {
     box-shadow: 0 0 0 5px $button-border-color;
   }
-}
-input[type="submit"] {
-  cursor: pointer;
 }
 input:hover {
   @media #{$max-mobile-width} {
@@ -58,7 +58,9 @@ input:hover {
     box-shadow: 0 0 0 5px $button-border-color-hover;
   }
 }
-input:active {
+input:focus {
+  outline-width: 0;
+  border-width: 0;
   @media #{$max-mobile-width} {
     box-shadow: 0 0 0 6px $button-border-color-hover;
   }
@@ -69,9 +71,16 @@ input:active {
     box-shadow: 0 0 0 7px $button-border-color-hover;
   }
 }
-input:focus {
-  outline-width: 0;
-  border-width: 0;
+input:active {
+  @media #{$max-mobile-width} {
+    box-shadow: 0 0 0 6px $button-border-color-hover;
+  }
+  @media #{$min-tablet-width} {
+    box-shadow: 0 0 0 5px $button-border-color-hover;
+  }
+  @media #{$min-desktop-width} {
+    box-shadow: 0 0 0 7px $button-border-color-hover;
+  }
 }
 button {
   transition: all 0.2s ease 0ms;
