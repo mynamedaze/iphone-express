@@ -1,9 +1,8 @@
 .call-master {
   width: 100%;
-  background-color: $section-color;
+  @include gradient;
 }
 .call-master__wrapper {
-  background-color: darkkhaki;
   @include section-width;
   box-sizing: border-box;
   color: $text-alt-color;
@@ -42,7 +41,6 @@
   }
 }
 .call-master__form-field {
-  background-color: orange;
   box-sizing: border-box;
   display: flex;
   @media #{$max-mobile-width} {
@@ -113,7 +111,6 @@
 }
 .callmaster__contact-field {
   text-align: center;
-  background-color: orchid;
   position: relative;
   @media #{$max-mobile-width} {
     display: none;

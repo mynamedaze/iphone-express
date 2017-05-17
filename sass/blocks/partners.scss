@@ -1,6 +1,6 @@
 .partners {
   width: 100%;
-  background-color: $section-color;
+  background-color: $partners-bg;
   @media #{$max-mobile-width} {
     display: none;
   }
@@ -9,7 +9,6 @@
   color: $text-alt-color;
   box-sizing: border-box;
   @include section-width;
-  background-color: midnightblue;
   @media #{$min-tablet-width} {
     padding-top: 32px;
     padding-bottom: 9px;
@@ -36,10 +35,8 @@
 }
 .partners__list {
   @include list-margins;
-  
   padding-left: 0;
   box-sizing: border-box;
-  background-color: royalblue;
   display: flex;
   flex-wrap: wrap;
   @media #{$min-tablet-width} {
@@ -53,7 +50,6 @@
   @media #{$min-tablet-width} {
     width: 25%;
     height: 120px;
-    background-color: black;
     background-position: center;
     background-repeat: no-repeat;
   }

@@ -7,11 +7,10 @@ $max-tablet-wrapper: 991px;
 
 $min-desktop-width: "(min-width: 1362px)";
 $max-desktop-wrapper: 1400px;
-
-$section-color: green;
+$bg-main-color: #ffffff;
+$section-color: $bg-main-color;
 
 $text-main-color: #000000;
-$bg-main-color: #ffffff;
 $font-main: "proxima_nova", "Arial", sans-serif;
 
 $button-color: #f5d211;
@@ -32,3 +31,7 @@ $feeddots-color: #03b867;
 $feedback-link: #4c85aa;
 
 $author-border: #9f9f9f;
+
+$we-fast-bg: #158ee4;
+$utp-field-bg: #00bf54;
+$partners-bg: #0ba69c;

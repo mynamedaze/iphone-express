@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  background-color: $section-color;
+  @include gradient;
   @media #{$max-mobile-width} {
     margin-top: -130px;
   }
@@ -11,12 +11,17 @@
   }
   @media #{$min-desktop-width} {
     margin-top: -123px;
+    background: rgb(0,191,84);
+    background: -moz-linear-gradient(left, rgba(0,191,84,0.8) 0%, rgba(22,141,232,0.8) 100%), url("../img/broken-display-bg.jpg");
+    background: -webkit-linear-gradient(left, rgba(0,191,84,0.8) 0%,rgba(22,141,232,0.8) 100%), url("../img/broken-display-bg.jpg");
+    background: linear-gradient(to right, rgba(0,191,84,0.8) 0%,rgba(22,141,232,0.8) 100%), url("../img/broken-display-bg.jpg");
+    background-position: center center;
+    background-size: 100% 100%;
   }
 }
 .intro::after {
   position: absolute;
   content: "";
-  background-color: orchid;
   width: 100%;
   left: 0;
   bottom: 0;
@@ -42,7 +47,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #30D5C8;
   @include section-width;
   @media #{$max-mobile-width} {
     min-height: 519px;
@@ -60,20 +64,18 @@
     padding-bottom: 70px;
   }
 }
-.intro__wrapper::after{
+.intro__down-arrow{
   position: absolute;
-  content: "";
-  background-color: black;
   z-index: 3;
   background-repeat: no-repeat;
   background-position: 0 0;
+  left: 50%;
   @media #{$max-mobile-width} {
     display: none;
   }
   @media #{$min-tablet-width} {
     width: 28px;
     height: 7px;
-    left: 50%;
     transform: translateX(-14px);
     bottom: 19px;
     background-image: url("../img/down-arrow.svg");
@@ -82,7 +84,6 @@
   @media #{$min-desktop-width} {
     width: 50px;
     height: 12px;
-    left: 50%;
     transform: translateX(-25px);
     bottom: 34px;
     background-image: url("../img/down-arrow.svg");
@@ -113,7 +114,6 @@
   }
 }
 .intro__utp-item {
-  background-color: #AF4035;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -131,7 +131,6 @@
 .intro__utp-item-text {
   position: relative;
   box-sizing: border-box;
-  background-color: #7BA05B;
   color: $text-alt-color;
   text-align: center;
   @media #{$max-mobile-width} {
@@ -154,7 +153,6 @@
 .intro__utp-item-text::after {
   position: absolute;
   content: "";
-  background-color: orchid;
   left: 50%;
   top: 0px;
   background-repeat: no-repeat;
@@ -253,7 +251,10 @@
 }
 .intro__form-field {
   @media #{$max-mobile-width} {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    @include content-center;
   }
   @media #{$min-tablet-width} {
     display: flex;
@@ -261,7 +262,22 @@
     justify-content: space-around;
   }
 }
+.intro__form-field--mobile {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+}
 .intro__form-input {
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    margin-top: 25px;
+    font-size: 1.9rem;
+    width: 255px;
+    height: 4.5rem;
+    border-radius: 4.5rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   @media #{$min-tablet-width} {
     width: 175px;
     height: 3.1rem;

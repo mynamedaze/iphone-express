@@ -7,7 +7,6 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: mediumaquamarine;
   align-items: center;
   position: relative;
   @media #{$max-mobile-width} {
@@ -27,6 +26,7 @@
   text-align: center;
   @media #{$max-mobile-width} {
     font-size: 2.6rem;
+    width: 100%;
   }
   @media #{$min-tablet-width} {
     font-size: 2.7rem;
@@ -42,6 +42,7 @@
   @media #{$max-mobile-width} {
     font-size: 1.8rem;
     margin-top: 10px;
+    width: 100%;
   }
   @media #{$min-tablet-width} {
     font-size: 1.6rem;
@@ -136,10 +137,10 @@
 }
 .feedback__author-list {
   display: flex;
-  background-color: orange;
   box-sizing: border-box;
   @media #{$max-mobile-width} {
     flex-direction: column;
+    width: 100%;
   }
   @media #{$min-tablet-width} {
     @media #{$max-tablet-width} {
@@ -158,6 +159,9 @@
   }
 }
 .feedback__prev {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
   @media #{$min-tablet-width} {
     @media #{$max-tablet-width} {
       position: absolute;
@@ -168,13 +172,15 @@
       z-index: 3;
       width: 45px;
       height: 58px;
-      background-color: red;
       left: 150px;
       top: 260px;
     }
   }
 }
 .feedback__next {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
   @media #{$min-tablet-width} {
     @media #{$max-tablet-width} {
       position: absolute;
@@ -185,7 +191,6 @@
       z-index: 3;
       width: 45px;
       height: 58px;
-      background-color: red;
       right: 150px;
       top: 260px;
     }
@@ -193,7 +198,6 @@
 }
 .feedback__author {
   transition: transform 0.2s ease;
-  background-color: lawngreen;
   box-sizing: border-box;
   font-family: 'roboto', 'Arial', sans-serif;
   display: flex;
@@ -404,7 +408,6 @@
   display: none;
 }
 .feedback__dots-field {
-    background-color: burlywood;
   @media #{$max-mobile-width} {
     display: none;
   }

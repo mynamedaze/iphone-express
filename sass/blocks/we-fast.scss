@@ -1,13 +1,12 @@
 .we-fast {
   width: 100%;
-  background-color: $section-color;
   color: $text-alt-color;
+  background-color: $we-fast-bg;
 }
 .we-fast__wrapper {
   @include section-width;
   display: flex;
   flex-direction: column;
-  background-color: indianred;
   @media #{$max-mobile-width} {
     padding-top: 12px;
   }
@@ -70,7 +69,6 @@
   @include list-paddings;
   display: flex;
   padding-left: 0;
-  background-color: gold;
   box-sizing: border-box;
   @media #{$max-mobile-width} {
     margin-top: 0;
@@ -91,9 +89,9 @@
 .we-fast__item {
   text-align: center;
   position: relative;
-  background-color: grey;
   @media #{$max-mobile-width} {
     font-size: 1.9rem;
+    width: 100%;
   }
   @media #{$min-tablet-width} {
     font-size: 1.5rem;
@@ -108,7 +106,6 @@
   position: absolute;
   content: "";
   left: 50%;
-  background-color: navajowhite;
   background-repeat: no-repeat;
   background-position: center;
   @media #{$max-mobile-width} {

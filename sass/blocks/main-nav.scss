@@ -1,5 +1,4 @@
 .main-nav {
-  background-color: mediumseagreen;
   margin-right: auto;
   @media #{$max-mobile-width} {
     display: none;
@@ -25,7 +24,6 @@
 .main-nav__item {
   position: relative;
   text-align: center;
-  background-color: blue;
   margin-right: 2px;
   
   @media #{$min-tablet-width} {
@@ -66,7 +64,6 @@
   }
 }
 .main-nav__item-link {
-  background-color: orange;
   color: $text-alt-color;
   display: flex;
   align-items: center;

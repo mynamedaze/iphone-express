@@ -1,6 +1,14 @@
 .utp-field {
   width: 100%;
-  background-color: $section-color;
+  background-color: #00bf54;
+  @media #{$min-desktop-width} {
+    background: rgb(12,180,81);
+    background: -moz-linear-gradient(left, rgba(12,180,81,0.8) 0%, rgba(12,180,81,0.8) 100%), url("../img/utp-img-bg.jpg");
+    background: -webkit-linear-gradient(left, rgba(12,180,81,0.8) 0%,rgba(12,180,81,0.8) 100%), url("../img/utp-img-bg.jpg");
+    background: linear-gradient(to right, rgba(12,180,81,0.8) 0%,rgba(12,180,81,0.8) 100%), url("../img/utp-img-bg.jpg");
+    background-position: center center;
+    background-size: 100% 100%;
+  }
 }
 .utp-field__wrapper {
   @include section-width;
@@ -8,7 +16,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: mediumseagreen;
   box-sizing: border-box;
   @media #{$max-mobile-width} {
     padding-top: 30px;
@@ -28,7 +35,7 @@
   z-index: 2;
   align-self: center;
   text-align: center;
-  font-weigth: 700;
+  font-weight: 700;
   margin-bottom: 0;
   @media #{$max-mobile-width} {
     font-size: 2.6rem;
@@ -51,7 +58,6 @@
   }
 }
 .utp-field__list {
-  background-color: orchid;
   padding-left: 0;
   display: flex;
   box-sizing: border-box;
@@ -70,7 +76,6 @@
 .utp-field__item {
   box-sizing: border-box;
   position: relative;
-  background-color: olive;
   @media #{$max-mobile-width} {
     padding-left: 80px;
     font-size: 17px;
@@ -90,7 +95,6 @@
 .utp-field__item::before {
   position: absolute;
   content: "";
-  background-color: mediumpurple;
   background-repeat: no-repeat;
   background-position: center;
   @media #{$max-mobile-width} {

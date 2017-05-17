@@ -5,7 +5,6 @@
 .funny__wrapper {
   @include section-width;
   box-sizing: border-box;
-  background-color: darkkhaki;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +24,6 @@
   text-align: center;
   font-weight: 700;
   margin-top: 0;
-  background-color: gray;
   @media #{$max-mobile-width} {
     font-size: 2.6rem;
     margin-left: 20px;
@@ -41,7 +39,6 @@
 }
 .funny__text {
   text-align: center;
-  background-color: gray;
   @media #{$max-mobile-width} {
     font-size: 1.7rem;
     margin-left: 20px;

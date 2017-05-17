@@ -8,28 +8,31 @@
   <meta name="keywords" content="Ремонт iPhone, Ремонт айфон, Ремонт iPad, Ремонт iphone в Краснодаре, Сервисный центр iPhone в Краснодаре, Apple сервис, Ремонт iPhone 5, Ремонт iPhone 5s, Ремонт iPhone 6, Ремонт iPhone 6s, Ремонт iPhone 7"/>
   <title>Выездной ремонт Apple iPhone и iPad. Сервисный центр Айфон в Краснодаре. Iphone Express.</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/formatter.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 </head>
 <body>
   <header class="page-header">
     <h1 class="page-header__title  visually-hidden">Iphone Express</h1>
     <div class="page-header__wrapper">
       <div class="page-header__logo-field">
-        <a href="#" class="page-header__logo-link"><img class="page-header__logo" src="img/logo.svg" alt="Iphone Express logo"></a>
+        <a href="https://iphone-express.ru" class="page-header__logo-link"><img class="page-header__logo" src="img/logo.svg" alt="Iphone Express logo"></a>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="" class="main-nav__item-link"><span class="main-nav__item-text">Стоимость</span></a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__item-link"><span class="main-nav__item-text">О нас</span></a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__item-link"><span class="main-nav__item-text">Отзывы</span></a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__item-link"><span class="main-nav__item-text">Контакты</span></a></li>
+          <li class="main-nav__item"><a href="#cost-y" class="main-nav__item-link"><span class="main-nav__item-text">Стоимость</span></a></li>
+          <li class="main-nav__item"><a href="#about-us-y" class="main-nav__item-link"><span class="main-nav__item-text">О нас</span></a></li>
+          <li class="main-nav__item"><a href="#feedback-y" class="main-nav__item-link"><span class="main-nav__item-text">Отзывы</span></a></li>
+          <li class="main-nav__item"><a href="#contact-y" class="main-nav__item-link"><span class="main-nav__item-text">Контакты</span></a></li>
         </ul>
       </nav>
       <ul class="page-header__social-list">
-        <li class="page-header__social-item  page-header__social-item--insta"><a href="" class="page-header__social-link"><img src="img/insta.svg" alt="" class="page-header__social-img"></a></li>
-        <li class="page-header__social-item  page-header__social-item--vk"><a href="" class="page-header__social-link"><img src="img/vk.svg" alt="" class="page-header__social-img"></a></li>
-        <li class="page-header__social-item  page-header__social-item--whatsapp"><a href="" class="page-header__social-link"><img src="img/whatsapp.svg" alt="" class="page-header__social-img"></a></li>
-        <li class="page-header__social-item  page-header__social-item--imessage"><a href="" class="page-header__social-link"><img src="img/imessage.svg" alt="" class="page-header__social-img"></a></li>
-        <li class="page-header__social-item  page-header__social-item--telegram"><a href="" class="page-header__social-link"><img src="img/telegram.svg" alt="" class="page-header__social-img"></a></li>
+        <li class="page-header__social-item  page-header__social-item--insta"><a href="https://www.instagram.com/iphone_express24" class="page-header__social-link"><img src="img/insta.svg" alt="" class="page-header__social-img"></a></li>
+        <li class="page-header__social-item  page-header__social-item--vk"><a href="https://vk.com/iphone_express" class="page-header__social-link"><img src="img/vk.svg" alt="" class="page-header__social-img"></a></li>
+        <li class="page-header__social-item  page-header__social-item--whatsapp"><a href="whatsapp://send?text=Repair&phone=+79186661945&abid=+79186661945" class="page-header__social-link"><img src="img/whatsapp.svg" alt="" class="page-header__social-img"></a></li>
+        <li class="page-header__social-item  page-header__social-item--imessage"><a href="viber://add?number=79180166604" class="page-header__social-link"><img src="img/imessage.svg" alt="" class="page-header__social-img"></a></li>
+        <li class="page-header__social-item  page-header__social-item--telegram"><a href="tg://resolve?domain=iphone_express" class="page-header__social-link"><img src="img/telegram.svg" alt="" class="page-header__social-img"></a></li>
       </ul>
       <div class="page-header__contacts-field">
         <a href="tel:+79180166604" class="page-header__contact-number">+7(918)01-666-04</a>
@@ -45,15 +48,16 @@
         <div class="intro__utp-item"><span class="intro__utp-item-text  intro__utp-item-text--2">Квалифицированный ремонт при вас за <span class="intro__utp-item-bold">20 минут</span></span></div>
         <div class="intro__utp-item"><span class="intro__utp-item-text  intro__utp-item-text--3">Качественные комплектующие <span class="intro__utp-item-bold">с гарантией</span></span></div>
       </div>
-      <form action="#" method="post" class="intro__form-field" name="call-master">
-        <input type="text" class="intro__form-input  intro__form-input--info" name="firstname" id="firstname-field" placeholder="Имя" required>
-        <input type="tel" class="intro__form-input  intro__form-input--info" name="telephone" id="telephone-field-intro" pattern="\d*" required>
+      <form action="mail.php" method="post" class="intro__form-field  intro__form-field--mobile" id="form-1" name="call-master">
+        <input type="text" class="intro__form-input  intro__form-input--info" name="uname" id="firstname-field" placeholder="Имя" required>
+        <input type="tel" class="intro__form-input  intro__form-input--info" name="uphone" id="telephone-field" placeholder="Телефон" pattern="\d*" required>
         <input type="submit" class="intro__form-input  intro__form-input--submit" name="callback-submit" value="Быстрая консультация">
       </form>
       <button class="intro__call-button">Быстрая консультация</button>
     </div>
+    <a href="#cost-y" class="intro__down-arrow"></a>
   </section>
-  <section class="device-model">
+  <section class="device-model" id="cost-y">
     <div class="device-model__wrapper">
       <h2 class="device-model__title">Выберите модель вашего iPhone или iPad и неисправность</h2>
       <span class="device-model__etc">Цены указаны с учетом проведения работ (деталь + работа)</span>
@@ -62,68 +66,279 @@
         <button class="device-model__button  device-model__button--ipad">iPad</button>
       </div>
       <ul class="device-model__model-list  device-model__model-list--phone">
-        <li class="device-model__model-item"><span class="device-model__model-number">5</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">5C</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">5S</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">6</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">6+</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">SE</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">6S</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">6S+</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">7</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">7+</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone  device-model__model-item--active"><span class="device-model__model-number">5</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">5C</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">5S</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">6</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">6+</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">SE</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">6S</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">6S+</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">7</span></li>
+        <li class="device-model__model-item  device-model__model-item--phone"><span class="device-model__model-number">7+</span></li>
       </ul>
       <ul class="device-model__model-list  device-model__model-list--pad disable">
-        <li class="device-model__model-item"><span class="device-model__model-number">2</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">3</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">4</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">Air</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">Air 2</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">mini</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">mini 2</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">mini 3</span></li>
-        <li class="device-model__model-item"><span class="device-model__model-number">mini 4</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad  device-model__model-item--active"><span class="device-model__model-number">2</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">3</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">4</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">Air</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">Air 2</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">mini</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">mini 2</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">mini 3</span></li>
+        <li class="device-model__model-item  device-model__model-item--pad"><span class="device-model__model-number">mini 4</span></li>
       </ul>
       <div class="device-model__break-mainlist  device-model__break-mainlist--phone">
-        <ul class="device-model__break-list  device-model__break-list--phone-5">
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъема зарядки</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка (доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка (сложный ремонт)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло (доп. услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        <ul class="device-model__break-list  device-model__break-list--phone">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
           <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена пластикового корпуса</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">3890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">5090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">2490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">5490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">5490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">2490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">2090<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">3190<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1690<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">1890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">6490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">5490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">2890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">1990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">9490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">2490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">5990<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">2290<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">2890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма наушников</span><span class="device-model__break-type-cost">2390<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">15490<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">8900<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--phone disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">17890<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">от 5000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъёма зарядки</span><span class="device-model__break-type-cost">от 2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка(доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка(сложный ремонт)</span><span class="device-model__break-type-cost">от 4000<span class="device-model__rubl"> &#8381;</span></span></a></li>
         </ul>
       </div>
       <div class="device-model__break-mainlist  device-model__break-mainlist--pad  disable">
-        <ul class="device-model__break-list  device-model__break-list--phone-5">
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея</span><span class="device-model__break-type-cost">2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена слухового динамика</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки Home</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопки включения</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена микрофона</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена передней камеры</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена разъема зарядки</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Перепрошивка (доп.услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Пайка (сложный ремонт)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена металлического корпуса</span><span class="device-model__break-type-cost">2500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена рычага вибро</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена кнопок громкости</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена основной камеры</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена полифонич. динамика</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Наклеить защитное стекло (доп. услуга)</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
-          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Диагностика</span><span class="device-model__break-type-cost">1000<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        <ul class="device-model__break-list  device-model__break-list--pad">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">3750<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">4200<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">7250<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">4300<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">4550<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">6450<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">4300<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">4450<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">6450<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">5100<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">5400<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">8700<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">15450<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">6400<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">4200<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">3950<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">6800<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">4650<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">4550<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">7600<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена стекла (Touch Screen)</span><span class="device-model__break-type-cost">5600<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена аккумулятора</span><span class="device-model__break-type-cost">4700<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">7600<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+        </ul>
+        <ul class="device-model__break-list  device-model__break-list--pad  disable">
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Замена дисплея (нет изображения)</span><span class="device-model__break-type-cost">15500<span class="device-model__rubl"> &#8381;</span></span></a></li>
+          <li class="device-model__break-item"><a href="#" class="device-model__break-link"><span class="device-model__break-text">Правки корпуса (доп. услуга)</span><span class="device-model__break-type-cost">1500<span class="device-model__rubl"> &#8381;</span></span></a></li>
         </ul>
       </div>
       <span class="device-model__not-found">Не нашли в списке свою неисправность?<br>Звоните <span class="device-model__adaptive-text">по номеру</span> <a href="+79180166604" class="device-model__tel-number">8 (918) 01-666-04</a>, мы поможем!</span>
@@ -135,7 +350,7 @@
       <p class="departure__text">Наш мастер приедет в любое удобное время к Вам домой, в офис, в кафе и даже в спортзал. Ему понадобится лишь небольшой столик, чтобы быстро починить Ваш <span class="departure__iphone-text">Айфон</span><span class="departure__ipad-text">Айпад</span>!</p>
     </div>
   </section>
-  <section class="we-fast">
+  <section class="we-fast" id="about-us-y">
     <div class="we-fast__wrapper">
       <h2 class="we-fast__title">С нами всё быстро и просто</h2>
       <div class="we-fast__dashes-field">
@@ -184,13 +399,13 @@
       </ul>
     </div>
   </section>
-  <section class="feedback">
+  <section class="feedback" id="feedback-y">
     <div class="feedback__wrapper">
       <h2 class="feedback__title">Оставьте отзыв о наших мастерах и сервисе</h2>
-      <span class="feedback__description-text">Пишите нам в соцсетях <a href="#" class="feedback__social-link"> <img src="img/instagram2.svg" class="feedback__social-img" alt="Instagram"> </a> <a href="#" class="feedback__social-link"> <img src="img/vk2.svg" class="feedback__social-img" alt="Vkontakte"> </a> или на почту <a href="href="mailto:info@iphone-express.ru"" class="feedback__mail">info@iphone-express.ru</a></span>
+      <span class="feedback__description-text">Пишите нам в соцсетях <a href="https://www.instagram.com/iphone_express24" class="feedback__social-link"> <img src="img/instagram2.svg" class="feedback__social-img" alt="Instagram"> </a> <a href="https://vk.com/iphone_express" class="feedback__social-link"> <img src="img/vk2.svg" class="feedback__social-img" alt="Vkontakte"> </a> или на почту <a href="mailto:info@iphone-express.ru" class="feedback__mail">info@iphone-express.ru</a></span>
       <div class="feedback__toggle">
-        <button class="feedback__button  feedback__button--social  feedback__button--active">Соцсети</li>
-        <button class="feedback__button  feedback__button--audio">Аудио</li>
+        <button class="feedback__button  feedback__button--social  feedback__button--active">Соцсети</button>
+        <button class="feedback__button  feedback__button--audio">Аудио</button>
       </div>
       <div class="feedback__author-list">
         <blockquote class="feedback__author">
@@ -234,15 +449,15 @@
         <li class="feedback__dot  feedback__dot--disabled"></li>
         <li class="feedback__dot  feedback__dot--disabled"></li>
       </ul>
-      <span class="feedback__more">Посмотреть еще отзывы</a>
+      <span class="feedback__more">Посмотреть еще отзывы</span>
     </div>
   </section>
-  <section class="call-master">
+  <section class="call-master" id="contact-y">
     <div class="call-master__wrapper">
       <h2 class="call-master__title">Вызовите мастера в любой день, мы работаем без выходных!</h2>
-      <form action="" class="call-master__form-field" method="post">
-        <input type="text" class="call-master__input  call-master__input--info" name="firstname" id="firstname-field" placeholder="Имя" required>
-        <input type="tel" class="call-master__input  call-master__input--info" name="telephone" id="telephone-field-callback" placeholder="Телефон" pattern="\d*" required>
+      <form action="mail.php" class="call-master__form-field" id="form-2" method="post">
+        <input type="text" class="call-master__input  call-master__input--info" name="uname" id="firstname-field-callback" placeholder="Имя" required>
+        <input type="tel" class="call-master__input  call-master__input--info" name="uphone" id="telephone-field-callback" placeholder="Телефон" pattern="\d*" required>
         <input type="submit" class="call-master__input  call-master__input--submit" name="callback-submit" value="Вызвать мастера">
       </form>
       <div class="callmaster__contact-field">
@@ -261,19 +476,16 @@
     <h1 class="page-footer__title visually-hidden">Iphone Express. Ремонт iPhone и iPad</h1>
     <div class="page-footer__wrapper">
       <a href="tel:+79180166604" class="page-footer__phone-number">+7(918)01-666-04</a>
-      <span class="page-footer__copyright">Iphone Express 2017. Все права защищены</span>
+      <span class="page-footer__copyright">&copy; Iphone Express 2017. Все права защищены</span>
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a href="#" class="page-footer__social-link"><img src="img/insta.svg" class="page-footer__social-img" alt="Instagram"></a></li>
-        <li class="page-footer__social-item"><a href="#" class="page-footer__social-link"><img src="img/vk.svg" class="page-footer__social-img" alt="Vkontakte"></a></li>
+        <li class="page-footer__social-item"><a href="https://www.instagram.com/iphone_express24" class="page-footer__social-link"><img src="img/insta.svg" class="page-footer__social-img" alt="Instagram"></a></li>
+        <li class="page-footer__social-item"><a href="https://vk.com/iphone_express" class="page-footer__social-link"><img src="img/vk.svg" class="page-footer__social-img" alt="Vkontakte"></a></li>
       </ul>
       <div class="page-footer__logo-field">
-        <a href="#" class="page-footer__logo-link"><img class="page-footer__logo" src="img/logo.svg" alt="Iphone Express logo"></a>
+        <a href="https://iphone-express.ru" class="page-footer__logo-link"><img class="page-footer__logo" src="img/logo.svg" alt="Iphone Express logo"></a>
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/formatter.min.js"></script>
-  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
