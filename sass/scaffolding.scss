@@ -28,6 +28,66 @@ body {
   margin: 0px;
   color: $text-main-color;
 }
+span::-moz-selection {
+  background: $button-color;
+}
+span::selection {
+  background: $button-color;
+}
+p::-moz-selection {
+  background: $button-color;
+}
+p::selection {
+  background: $button-color;
+}
+li::-moz-selection {
+  background: $button-color;
+}
+li::selection {
+  background: $button-color;
+}
+h2::-moz-selection {
+  background: $button-color;
+}
+h2::selection {
+  background: $button-color;
+}
+a::-moz-selection {
+  background: $button-color;
+}
+a::selection {
+  background: $button-color;
+}
+img::-moz-selection {
+  background: $button-color;
+}
+img::selection {
+  background: $button-color;
+}
+input::-moz-selection {
+  background: $button-color;
+}
+input::selection {
+  background: $button-color;
+}
+button::-moz-selection {
+  background: $button-color;
+}
+button::selection {
+  background: $button-color;
+}
+cite::-moz-selection {
+  background: $button-color;
+}
+cite::selection {
+  background: $button-color;
+}
+br::-moz-selection {
+  background: $button-color;
+}
+br::selection {
+  background: $button-color;
+}
 input {
   font-family: $font-main;
   font-weight: 500;

@@ -3,6 +3,7 @@
   width: 100%;
   box-sizing: border-box;
   @include gradient;
+  overflow: hidden;
   @media #{$max-mobile-width} {
     margin-top: -130px;
   }
@@ -22,23 +23,45 @@
 .intro::after {
   position: absolute;
   content: "";
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-color: $bg-main-color;
   @media #{$max-mobile-width} {
     display: none;
   }
   @media #{$min-tablet-width} {
-    height: 28px;
-    background-image: url("../img/intro-cut-tablet.svg");
-    background-size: 100% 28px;
+    width: 55%;
+    height: 63px;
+    left: -20px;
+    bottom: -43px;
+    transform: rotate(4deg);
   }
   @media #{$min-desktop-width} {
+    width: 55%;
     height: 70px;
-    background-image: url("../img/intro-cut-desktop.svg");
-    background-size: 100% 70px;
+    left: -20px;
+    bottom: -43px;
+    transform: rotate(4deg);
+  }
+}
+.intro::before {
+  position: absolute;
+  content: "";
+  background-color: $bg-main-color;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    width: 55%;
+    height: 63px;
+    right: -20px;
+    bottom: -43px;
+    transform: rotate(-4deg);
+  }
+  @media #{$min-desktop-width} {
+    width: 55%;
+    height: 70px;
+    right: -20px;
+    bottom: -43px;
+    transform: rotate(-4deg);
   }
 }
 .intro__wrapper {

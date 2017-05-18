@@ -10,5 +10,5 @@ $telephone = trim($telephone);
 //echo $firstname;
 //echo "<br>";
 //echo $telephone;
-mail("imdaze@yandex.ru", "Заявка на ремонт. Iphone Express.", "ФИО:".$firstname.". Телефон: ".$telephone ,"From: imdaze@yandex.ru \r\n")
+mail("iphone.exp@yandex.ru", "Заявка на ремонт. Iphone Express.", "ФИО:".$firstname.". Телефон: ".$telephone ,"From: iphone.exp@yandex.ru \r\n")
 ?>

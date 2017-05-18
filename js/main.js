@@ -1,3 +1,10 @@
+var firstnameField = document.getElementById('firstname-field');
+var telephoneField = document.getElementById('telephone-field');
+
+var firstNameFieldCallback = document.getElementById('firstname-field-callback');
+var telephoneFieldCallback = document.getElementById('telephone-field-callback');
+
+/*оживляем карусель в интро*/
 $(document).ready(function(){
   $(".intro__utp-list").owlCarousel({
     responsive:{
@@ -189,6 +196,10 @@ frm1.submit(function (ev) {
         data: frm1.serialize(),
         success: function (data) {
             alert('Заявка отправлена!');
+            $(firstnameField).val('');
+            $(telephoneField).val('');
+            $(firstnameFieldCallback).val('');
+            $(telephoneFieldCallback).val('');
         }
     });
     ev.preventDefault();
@@ -206,4 +217,14 @@ frm2.submit(function (ev) {
         }
     });
     ev.preventDefault();
+});
+
+/*запрет на ввод букв в поле телефона*/
+
+$(telephoneField).keypress(function(e) {
+    return !(/[А-Яа-яA-Za-z ]/.test(String.fromCharCode(e.charCode)));
+});
+
+$(telephoneFieldCallback).keypress(function(e) {
+    return !(/[А-Яа-яA-Za-z ]/.test(String.fromCharCode(e.charCode)));
 });
