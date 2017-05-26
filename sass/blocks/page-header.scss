@@ -123,6 +123,16 @@
     display: none;
   }
 }
+.page-header__social-item--tablet-vk {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+}
+.page-header__social-item--mobile-vk {
+  @media #{$min-tablet-width} {
+    display: none;
+  }
+}
 .page-header__social-img {
   @media #{$max-mobile-width} {
     width: 33px;

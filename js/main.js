@@ -1,8 +1,14 @@
 var firstnameField = document.getElementById('firstname-field');
 var telephoneField = document.getElementById('telephone-field');
 
+var firstnameFieldDeparture = document.getElementById('firstname-field-departure');
+var telephoneFieldDeparture = document.getElementById('telephone-field-departure');
+
 var firstNameFieldCallback = document.getElementById('firstname-field-callback');
 var telephoneFieldCallback = document.getElementById('telephone-field-callback');
+
+var firstnameFieldPromo = document.getElementById('firstname-field-promo');
+var telephoneFieldPromo = document.getElementById('telephone-field-promo');
 
 /*оживляем карусель в интро*/
 $(document).ready(function(){
@@ -177,6 +183,7 @@ modelItemsPad.forEach(function (element, i) {
 });
 
 /*настраиваем кнопку для попап формы заявки на мобильной версии*/
+/*кнопка интро*/
 var introCallButton = document.getElementsByClassName('intro__call-button');
 
 var introFormField = document.getElementsByClassName('intro__form-field');
@@ -184,6 +191,25 @@ var introFormField = document.getElementsByClassName('intro__form-field');
 $(introCallButton).click(function() {
     $(introFormField).removeClass('intro__form-field--mobile');
     $(introCallButton).addClass('disable');
+});
+/*кнопка подъедем куда скажете departure*/
+var departureCallButton = document.getElementsByClassName('departure__call-button');
+
+var departureFormField = document.getElementsByClassName('departure__form-field');
+
+$(departureCallButton).click(function() {
+    $(departureFormField).removeClass('departure__form-field--tablet');
+    $(departureCallButton).addClass('disable');
+});
+
+/*кнопка акции promo*/
+var promoCallButton = document.getElementsByClassName('promo__call-button');
+
+var promoFormField = document.getElementsByClassName('promo__form-field');
+
+$(promoCallButton).click(function() {
+    $(promoFormField).removeClass('promo__form-field--tablet');
+    $(promoCallButton).addClass('disable');
 });
 
 /*форма отправки без перезагрузки*/
@@ -198,8 +224,8 @@ frm1.submit(function (ev) {
             alert('Заявка отправлена!');
             $(firstnameField).val('');
             $(telephoneField).val('');
-            $(firstnameFieldCallback).val('');
-            $(telephoneFieldCallback).val('');
+            $(firstnameFieldDeparture).val('');
+            $(telephoneFieldDeparture).val('');
         }
     });
     ev.preventDefault();
@@ -214,17 +240,72 @@ frm2.submit(function (ev) {
         data: frm2.serialize(),
         success: function (data) {
             alert('Заявка отправлена!');
+            $(firstnameFieldDeparture).val('');
+            $(telephoneFieldDeparture).val('');
         }
     });
     ev.preventDefault();
 });
 
-/*запрет на ввод букв в поле телефона*/
+var frm3 = $('#form-3');
+
+frm3.submit(function (ev) {
+    $.ajax({
+        type: frm3.attr('method'),
+        url: frm3.attr('action'),
+        data: frm3.serialize(),
+        success: function (data) {
+            alert('Заявка отправлена!');
+            $(firstnameFieldCallback).val('');
+            $(telephoneFieldCallback).val('');
+        }
+    });
+    ev.preventDefault();
+});
+
+var frm4 = $('#form-4');
+
+frm4.submit(function (ev) {
+    $.ajax({
+        type: frm4.attr('method'),
+        url: frm4.attr('action'),
+        data: frm4.serialize(),
+        success: function (data) {
+            alert('Заявка отправлена!');
+            $(firstnameFieldPromo).val('');
+            $(telephoneFieldPromo).val('');
+        }
+    });
+    ev.preventDefault();
+});
+
+/*запрет на ввод букв в поле телефона
 
 $(telephoneField).keypress(function(e) {
     return !(/[А-Яа-яA-Za-z ]/.test(String.fromCharCode(e.charCode)));
 });
 
+$(telephoneFieldDeparture).keypress(function(e) {
+    return !(/[А-Яа-яA-Za-z ]/.test(String.fromCharCode(e.charCode)));
+});
+
 $(telephoneFieldCallback).keypress(function(e) {
     return !(/[А-Яа-яA-Za-z ]/.test(String.fromCharCode(e.charCode)));
+});
+*/
+
+$(document).ready(function(){
+  $(telephoneField).inputmask("+7 (999) 999-9999"); //specifying options
+});
+
+$(document).ready(function(){
+  $(telephoneFieldDeparture).inputmask("+7 (999) 999-9999"); //specifying options
+});
+
+$(document).ready(function(){
+  $(telephoneFieldCallback).inputmask("+7 (999) 999-9999"); //specifying options
+});
+
+$(document).ready(function(){
+  $(telephoneFieldPromo).inputmask("+7 (999) 999-9999"); //specifying options
 });

@@ -8,15 +8,17 @@
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  padding-bottom: 20px;
   @media #{$max-mobile-width} {
-  padding-top: 13px;
+    padding-top: 13px;
+    padding-bottom: 63px;
   }
   @media #{$min-tablet-width} {
     padding-top: 2px;
+    padding-bottom: 33px;
   }
   @media #{$min-desktop-width} {
     padding-top: 4px;
+    padding-bottom: 80px;
   }
 }
 .device-model__title {
@@ -248,12 +250,7 @@
 .device-model__break-type-cost {
   flex-shrink: 0;
   position: relative;
-  @media #{$min-tablet-width} {
-    font-weight: 300;
-  }
-  @media #{$min-desktop-width} {
-    font-weight: 500;
-  }
+  font-weight: 700;
 }
 .device-model__break-type-cost::after {
   position: absolute;

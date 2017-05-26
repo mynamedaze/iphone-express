@@ -97,6 +97,7 @@ input {
 }
 input[type="submit"] {
   cursor: pointer;
+  font-weight: 700;
   @media #{$max-mobile-width} {
     box-shadow: 0 0 0 4px $button-border-color;
   }
@@ -145,7 +146,7 @@ input:active {
 button {
   transition: all 0.2s ease 0ms;
   font-family: $font-main;
-  font-weight: 500;
+  font-weight: 700;
   border-width: 0;
   box-sizing: border-box;
   cursor: pointer;

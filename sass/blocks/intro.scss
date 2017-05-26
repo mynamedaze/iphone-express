@@ -2,8 +2,8 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  @include gradient;
   overflow: hidden;
+  @include gradient;
   @media #{$max-mobile-width} {
     margin-top: -130px;
   }
@@ -17,7 +17,7 @@
     background: -webkit-linear-gradient(left, rgba(0,191,84,0.8) 0%,rgba(22,141,232,0.8) 100%), url("../img/broken-display-bg.jpg");
     background: linear-gradient(to right, rgba(0,191,84,0.8) 0%,rgba(22,141,232,0.8) 100%), url("../img/broken-display-bg.jpg");
     background-position: center center;
-    background-size: 100% 100%;
+    background-size: auto 150%;
   }
 }
 .intro::after {
@@ -38,7 +38,7 @@
     width: 55%;
     height: 70px;
     left: -20px;
-    bottom: -43px;
+    bottom: -38px;
     transform: rotate(4deg);
   }
 }
@@ -60,7 +60,7 @@
     width: 55%;
     height: 70px;
     right: -20px;
-    bottom: -43px;
+    bottom: -38px;
     transform: rotate(-4deg);
   }
 }

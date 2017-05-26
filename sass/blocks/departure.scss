@@ -1,6 +1,11 @@
 .departure {
   width: 100%;
   background-color: $section-color;
+  position: relative;
+  z-index: 3;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
 }
 .departure__wrapper {
   @include section-width;
@@ -11,15 +16,14 @@
   @media #{$max-mobile-width} {
     padding-top: 19px;
     padding-bottom: 20px;
-    min-height: 97px;
   }
   @media #{$min-tablet-width} {
     padding-top: 18px;
-    min-height: 158px;
+    padding-bottom: 40px;
   }
   @media #{$min-desktop-width} {
     padding-top: 78px;
-    min-height: 298px;
+    padding-bottom: 40px;
   }
 }
 .departure__title {
@@ -53,5 +57,99 @@
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 20px;
+  }
+}
+.departure__form-field {
+  @media #{$max-mobile-width} {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    @include content-center;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.departure__form-field--tablet{
+  @media #{$min-tablet-width} {
+    display: none;
+  }
+}
+.departure__form-input {
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    margin-top: 25px;
+    font-size: 1.9rem;
+    width: 255px;
+    height: 4.5rem;
+    border-radius: 4.5rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media #{$min-tablet-width} {
+    width: 175px;
+    height: 3.1rem;
+    border-radius: 3.1rem;
+    font-size: 1.4rem;
+    margin-top: 18px;
+  }
+  @media #{$min-desktop-width} {
+    width: 310px;
+    height: 5.5rem;
+    font-size: 2.2rem;
+    margin-top: 30px;
+  }
+}
+.departure__form-input--info {
+  color: $input-placeholder-color;
+  font-weight: 300;
+  @media #{$min-tablet-width} {
+    padding-left: 18px;
+    padding-right: 18px;
+    border: 2px solid $author-border;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+.departure__form-input--info:focus {
+    border: 2px solid $author-border;
+}
+.departure__form-input--submit {
+  background-color: $button-color;
+  color: $button-text-color;
+}
+
+.departure__call-button {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    width: 175px;
+    height: 3.3rem;
+    border-radius: 3.3rem;
+    background-color: $button-color;
+    box-shadow: 0 0 0 4px $button-border-color;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 2.3rem;
+    width: 310px;
+    height: 5.8rem;
+    border-radius: 5.8rem;
+  }
+}
+.departure__call-button:hover {
+  @media #{$min-tablet-width} {
+    box-shadow: 0 0 0 4px $button-border-color-hover;
+  }
+}
+.departure__call-button:active {
+  @media #{$min-tablet-width} {
+    box-shadow: 0 0 0 6px $button-border-color-hover;
   }
 }

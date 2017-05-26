@@ -155,6 +155,15 @@
 }
 .we-fast__item--1::before {
   background-image: url("../img/site-zayavka.svg");
+  @media #{$max-mobile-width} {
+    background-size: 42px 80px;
+  }
+  @media #{$min-tablet-width} {
+    background-size: 30px 57px;
+  }
+  @media #{$min-desktop-width} {
+    background-size: 42px 80px;
+  }
 }
 .we-fast__item--1::after {
   background-image: url("../img/dashes.png");

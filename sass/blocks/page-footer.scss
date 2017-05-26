@@ -69,6 +69,7 @@
   }
 }
 .page-footer__social-item {
+  transition: background-color 0.2s ease;
   background-color: $button-border-color;
   @media #{$min-tablet-width} {
     width: 41px;
