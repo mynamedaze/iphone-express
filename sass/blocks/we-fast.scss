@@ -1,7 +1,12 @@
 .we-fast {
   width: 100%;
   color: $text-alt-color;
-  background-color: $we-fast-bg;
+  @media #{$max-mobile-width} {
+    @include we-fast-grad-vert;
+  }
+  @media #{$min-tablet-width} {
+    @include we-fast-grad-horiz;
+  }
 }
 .we-fast__wrapper {
   @include section-width;

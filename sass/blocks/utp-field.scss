@@ -1,11 +1,16 @@
 .utp-field {
   width: 100%;
-  background-color: #00bf54;
+  @media #{$max-mobile-width} {
+    @include utp-field-grad-vert;
+  }
+  @media #{$min-tablet-width} {
+    @include utp-field-grad-horiz;
+  }
   @media #{$min-desktop-width} {
-    background: rgb(12,180,81);
-    background: -moz-linear-gradient(left, rgba(12,180,81,0.8) 0%, rgba(12,180,81,0.8) 100%), url("../img/utp-img-bg.jpg");
-    background: -webkit-linear-gradient(left, rgba(12,180,81,0.8) 0%,rgba(12,180,81,0.8) 100%), url("../img/utp-img-bg.jpg");
-    background: linear-gradient(to right, rgba(12,180,81,0.8) 0%,rgba(12,180,81,0.8) 100%), url("../img/utp-img-bg.jpg");
+    background: rgb(61,207,143);
+    background: -moz-linear-gradient(left, rgba(61,207,143,0.8) 0%, rgba(79,226,162,0.8) 100%), url("../img/utp-img-bg.jpg");
+    background: -webkit-linear-gradient(left, rgba(61,207,143,0.8) 0%,rgba(79,226,162,0.8) 100%), url("../img/utp-img-bg.jpg");
+    background: linear-gradient(to right, rgba(61,207,143,0.8) 0%,rgba(79,226,162,0.8) 100%), url("../img/utp-img-bg.jpg");
     background-position: center center;
     background-size: 100% 100%;
   }

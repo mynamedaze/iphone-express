@@ -33,6 +33,34 @@ $(document).ready(function(){
     }
   });
 });
+/*оживляем карусель в партнерах*/
+$(document).ready(function(){
+  $(".partners__list").owlCarousel({
+    responsive:{
+        0:{
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            items:1,
+            dots: false
+        },
+        768:{
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            items:5,
+            dots: false
+        },
+        1362:{
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            items:6,
+            dots: false
+        }
+    }
+  });
+});
 /*Плавный скролл*/
 $(function(){
   $('a[href^="#"]').on('click', function(event) {
