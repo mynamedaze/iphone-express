@@ -1,9 +1,15 @@
 .page-footer {
   width: 100%;
-  background-color: rgb(73,198,225);
   border-top: solid 1px rgba(255, 255, 255, 0.5);
+  @media #{$max-mobile-width} {
+    background-color: #49C6E0;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: -102px;
+  }
   @media #{$min-desktop-width} {
     border-top: solid 2px rgba(255, 255, 255, 0.5);
+    margin-top: -179px;
   }
 }
 .page-footer__wrapper {

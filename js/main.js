@@ -4,11 +4,25 @@ var telephoneField = document.getElementById('telephone-field');
 var firstnameFieldDeparture = document.getElementById('firstname-field-departure');
 var telephoneFieldDeparture = document.getElementById('telephone-field-departure');
 
-var firstNameFieldCallback = document.getElementById('firstname-field-callback');
+var firstnameFieldCallback = document.getElementById('firstname-field-callback');
 var telephoneFieldCallback = document.getElementById('telephone-field-callback');
 
 var firstnameFieldPromo = document.getElementById('firstname-field-promo');
 var telephoneFieldPromo = document.getElementById('telephone-field-promo');
+
+var telephoneFieldPopupCallback = document.getElementById('telephone-field-popup-callback');
+
+var telephoneField20SecPopup = document.getElementById('telephone-field-20-sec-popup');
+
+/*переменные для попапа*/
+var zvonilka = document.getElementsByClassName('zvonilka');
+var callbackPopup = document.getElementsByClassName('callback-popup');
+var popupOverflow = document.getElementsByClassName('popup__overflow');
+var callbackClose = document.getElementsByClassName('callback-popup_close-btn');
+
+/*переменные для 20 секундного попапа*/
+var sec20Popup = document.getElementsByClassName('sec-20-popup');
+var sec20Close = document.getElementsByClassName('sec-20-popup__close-btn');
 
 /*оживляем карусель в интро*/
 $(document).ready(function(){
@@ -17,7 +31,7 @@ $(document).ready(function(){
         0:{
             loop: true,
             autoplay: true,
-            autoplayTimeout: 5000,
+            autoplayTimeout: 3000,
             items:1
         },
         768:{
@@ -40,21 +54,21 @@ $(document).ready(function(){
         0:{
             loop: true,
             autoplay: true,
-            autoplayTimeout: 5000,
-            items:1,
+            autoplayTimeout: 3000,
+            items:2,
             dots: false
         },
         768:{
             loop: true,
             autoplay: true,
-            autoplayTimeout: 5000,
+            autoplayTimeout: 3000,
             items:5,
             dots: false
         },
         1362:{
             loop: true,
             autoplay: true,
-            autoplayTimeout: 5000,
+            autoplayTimeout: 3000,
             items:6,
             dots: false
         }
@@ -211,6 +225,39 @@ modelItemsPad.forEach(function (element, i) {
 });
 
 /*настраиваем кнопку для попап формы заявки на мобильной версии*/
+
+$(zvonilka).click(function() {
+  $(callbackPopup).removeClass('callback-popup--inactive');
+  $(popupOverflow).removeClass('popup__overflow--inactive');
+});
+
+$(callbackClose).click(function() {
+  $(callbackPopup).addClass('callback-popup--inactive');
+  if ($(sec20Popup).hasClass('sec-20-popup--inactive')) {
+    $(popupOverflow).addClass('popup__overflow--inactive');
+  }
+});
+
+/*настраиваем на запуск попапа через 20 секунд*/
+var for20secCounter = 0;
+
+function show20SecPopup() {
+  $(sec20Popup).removeClass('sec-20-popup--inactive');
+  $(popupOverflow).removeClass('popup__overflow--inactive');
+}
+
+if (for20secCounter == 0) {
+  setTimeout(show20SecPopup, 20000);
+  for20secCounter = 1;
+}
+
+$(sec20Close).click(function() {
+  $(sec20Popup).addClass('sec-20-popup--inactive');
+  if ($(callbackPopup).hasClass('callback-popup--inactive')) {
+    $(popupOverflow).addClass('popup__overflow--inactive');
+  }
+});
+
 /*кнопка интро*/
 var introCallButton = document.getElementsByClassName('intro__call-button');
 
@@ -239,6 +286,7 @@ $(promoCallButton).click(function() {
     $(promoFormField).removeClass('promo__form-field--tablet');
     $(promoCallButton).addClass('disable');
 });
+/* открываем и закрываем попап при нажатии на звонилку и закрытие крестиком*/
 
 /*форма отправки без перезагрузки*/
 var frm1 = $('#form-1');
@@ -307,6 +355,40 @@ frm4.submit(function (ev) {
     ev.preventDefault();
 });
 
+var frm5 = $('#form-5');
+
+frm5.submit(function (ev) {
+    $.ajax({
+        type: frm5.attr('method'),
+        url: frm5.attr('action'),
+        data: frm5.serialize(),
+        success: function (data) {
+            alert('Заявка отправлена!');
+            $(telephoneFieldPopupCallback).val('');
+            $(callbackPopup).addClass('callback-popup--inactive');
+            $(popupOverflow).addClass('popup__overflow--inactive');
+        }
+    });
+    ev.preventDefault();
+});
+
+var frm6 = $('#form-6');
+
+frm6.submit(function (ev) {
+    $.ajax({
+        type: frm6.attr('method'),
+        url: frm6.attr('action'),
+        data: frm6.serialize(),
+        success: function (data) {
+            alert('Заявка отправлена!');
+            $(telephoneField20SecPopup).val('');
+            $(callbackPopup).addClass('sec-20-popup--inactive');
+            $(popupOverflow).addClass('popup__overflow--inactive');
+        }
+    });
+    ev.preventDefault();
+});
+
 /*запрет на ввод букв в поле телефона
 
 $(telephoneField).keypress(function(e) {
@@ -336,4 +418,10 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $(telephoneFieldPromo).inputmask("+7 (999) 999-9999"); //specifying options
+});
+$(document).ready(function(){
+  $(telephoneFieldPopupCallback).inputmask("+7 (999) 999-9999"); //specifying options
+});
+$(document).ready(function(){
+  $(telephoneField20SecPopup).inputmask("+7 (999) 999-9999"); //specifying options
 });

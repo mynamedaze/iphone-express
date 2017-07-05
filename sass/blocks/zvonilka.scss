@@ -1,0 +1,52 @@
+@keyframes alarm {
+from {box-shadow: 0 0 12px 8px inset rgba(255, 0, 0, 0);}
+50% {box-shadow: 0 0 12px 8px rgba(255, 0, 0, 0.5);}
+to {box-shadow: 0 0 12px 8px inset rgba(255, 0, 0, 0);}
+}
+@keyframes drill {
+from {transform: rotate(0deg);}
+50% {transform: rotate(45deg);}
+to {transform: rotate(0deg);}
+}
+@keyframes alarm-off {
+from {box-shadow: 0 0 12px 8px inset rgba(255, 0, 0, 0);}
+10% {box-shadow: 0 0 12px 8px rgba(255, 0, 0, 0.5);}
+30% {box-shadow: 0 0 12px 8px rgba(255, 0, 0, 0);}
+to {box-shadow: 0 0 12px 8px rgba(255, 0, 0, 0);}
+}
+@keyframes drill-off {
+from {transform: rotate(0deg);}
+2% {transform: rotate(45deg);}
+4% {transform: rotate(0deg);}
+6% {transform: rotate(45deg);}
+8% {transform: rotate(0deg);}
+10% {transform: rotate(45deg);}
+12% {transform: rotate(0deg);}
+to {transform: rotate(0deg);}
+}
+.zvonilka {
+  position: fixed;
+  z-index: 30;
+  width: 106px;
+  height: 106px;
+  left: 10%;
+  bottom: 10%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media #{$max-mobile-width} {
+    width: 70px;
+    height: 70px;
+  }
+}
+.zvonilka__img {
+  cursor: pointer;
+  border-radius: 50%;
+  animation: drill-off  5s infinite ease-in-out 3s,
+  alarm-off  5s infinite ease-in-out 3s;
+}
+.zvonilka__img:hover {
+  animation: drill  0.2s infinite ease-in-out,
+  alarm  1s infinite ease-in-out;
+}

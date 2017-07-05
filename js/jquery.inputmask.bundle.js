@@ -1041,6 +1041,14 @@
                     mouseEnter = !0, document.activeElement !== input && opts.showMaskOnHover && input.inputmask._valueGet() !== getBuffer().join("") && writeBuffer(input, getBuffer());
                 },
                 submitEvent: function(e) {
+                    var promoForm = document.getElementById('form-4');
+                    if (e.currentTarget == promoForm) {
+                        yaCounter38578045.reachGoal('callback_form-promo');
+                        ga('send','event','callback_form','promo');
+                    } else {
+                        yaCounter38578045.reachGoal('callback_form');
+                        ga('send','event','callback_form','main');
+                    }
                     undoValue !== getBuffer().join("") && $el.trigger("change"), opts.clearMaskOnLostFocus && -1 === getLastValidPosition() && el.inputmask._valueGet && el.inputmask._valueGet() === getBufferTemplate().join("") && el.inputmask._valueSet(""), 
                     opts.removeMaskOnSubmit && (el.inputmask._valueSet(el.inputmask.unmaskedvalue(), !0), 
                     setTimeout(function() {

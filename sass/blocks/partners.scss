@@ -1,6 +1,11 @@
 .partners {
   width: 100%;
-  background-color: $partners-bg;
+  @media #{$max-mobile-width} {
+    @include utp-field-grad-vert;
+  }
+  @media #{$min-tablet-width} {
+    @include utp-field-grad-horiz;
+  }
 }
 .partners__wrapper {
   color: $text-alt-color;
@@ -10,7 +15,7 @@
   flex-direction: column;
   @media #{$max-mobile-width} {
     padding-top: 32px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
   @media #{$min-tablet-width} {
     padding-top: 27px;
@@ -38,7 +43,7 @@
 .partners__list {
   padding-left: 0;
   @media #{$max-mobile-width} {
-    margin-top: 20px;
+    margin-top: 0;
   }
   @media #{$min-desktop-width} {
     margin-top: 40px;
@@ -63,7 +68,7 @@
 .partners__item--1 {
   background-image: url("../img/sberbank.svg");
   @media #{$max-mobile-width} {
-    background-size: 155px 108px;
+    background-size: 88px 61px;
   }
   @media #{$min-tablet-width} {
     background-size: 88px 61px;
@@ -75,7 +80,7 @@
 .partners__item--2 {
   background-image: url("../img/alexchoco.svg");
   @media #{$max-mobile-width} {
-    background-size: 116px 108px;
+    background-size: 66px 61px;
   }
   @media #{$min-tablet-width} {
     background-size: 66px 61px;
@@ -87,7 +92,7 @@
 .partners__item--3 {
   background-image: url("../img/tander.svg");
   @media #{$max-mobile-width} {
-    background-size: 138px 108px;
+    background-size: 78px 61px;
   }
   @media #{$min-tablet-width} {
     background-size: 78px 61px;
@@ -99,7 +104,7 @@
 .partners__item--4 {
   background-image: url("../img/2way-store.svg");
   @media #{$max-mobile-width} {
-    background-size: 107px 108px;
+    background-size: 61px 61px;
   }
   @media #{$min-tablet-width} {
     background-size: 61px 61px;
@@ -111,7 +116,7 @@
 .partners__item--5 {
   background-image: url("../img/cluchavto.svg");
   @media #{$max-mobile-width} {
-    background-size: 191px 23px;
+    background-size: 108px 13px;
   }
   @media #{$min-tablet-width} {
     background-size: 108px 13px;
@@ -123,7 +128,7 @@
 .partners__item--6 {
   background-image: url("../img/magnit.svg");
   @media #{$max-mobile-width} {
-    background-size: 84px 69px;
+    background-size: 48px 39px;
   }
   @media #{$min-tablet-width} {
     background-size: 48px 39px;
@@ -135,7 +140,7 @@
 .partners__item--7 {
   background-image: url("../img/pyos.svg");
   @media #{$max-mobile-width} {
-    background-size: 218px 55px;
+    background-size: 123px 31px;
   }
   @media #{$min-tablet-width} {
     background-size: 123px 31px;
@@ -147,7 +152,7 @@
 .partners__item--8 {
   background-image: url("../img/galya.svg");
   @media #{$max-mobile-width} {
-    background-size: 149px 93px;
+    background-size: 84px 53px;
   }
   @media #{$min-tablet-width} {
     background-size: 84px 53px;
