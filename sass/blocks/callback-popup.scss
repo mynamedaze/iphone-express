@@ -1,27 +1,31 @@
 .callback-popup {
   position: fixed;
   content: "";
-  top: 50%;
   z-index: 40;
   width: 390px;
   background-color: $callback-popup-bg;
   box-sizing: border-box;
   transition: right 0.5s ease 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1000;
   @media #{$max-mobile-width} {
     min-height: 36rem;
     padding-top: 50px;
     width: 100%;
+    height: 100%;
     right: 0;
-    transform: translateY(-18rem);
+    top: 0;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 20px;
   }
   @media #{$min-tablet-width} {
-    min-height: 48rem;
+    top: 0;
+    height: 100%;
     padding-top: 70px;
-    right: 10px;
-    transform: translateY(-24rem);
+    right: 0;
   }
 }
 .callback-popup_close-btn {
@@ -113,6 +117,9 @@
   font-weight: 500;
   background-color: $button-color;
   margin-top: 20px;
+}
+.callback-popup__conf-link {
+  color: #4c85aa;
 }
 .callback-popup__express-logo {
   display: block;

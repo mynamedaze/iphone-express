@@ -46,18 +46,22 @@
 .page-footer__copyright {
   position: relative;
   @media #{$max-mobile-width} {
+    text-align: center;
     order: 2;
     font-size: 1.5rem;
     margin-top: 30px;
   }
   @media #{$min-tablet-width} {
     font-size: 1.4rem;
-    width: 145px;
+    width: 250px;
   }
   @media #{$min-desktop-width} {
     font-size: 2.2rem;
-    width: 230px;
+    width: 350px;
   }
+}
+.page-footer__conf-link {
+  color: #f5d211;
 }
 .page-footer__social-list {
   display: flex;

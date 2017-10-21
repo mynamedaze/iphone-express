@@ -1,0 +1,45 @@
+.conf {
+    width: 100%;
+  background: rgb(94,214,172);
+    background: -moz-linear-gradient(top, rgba(94,214,172,1) 0%, rgba(73,198,225,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(94,214,172,1) 0%,rgba(73,198,225,1) 100%);
+    background: linear-gradient(to bottom, rgba(94,214,172,1) 0%,rgba(73,198,225,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ed6ac', endColorstr='#49c6e1',GradientType=0 );
+}
+.conf__wrapper {
+  text-align: left;
+  @include section-width;
+  box-sizing: border-box;
+  color: $text-alt-color;
+  @media #{$max-mobile-width} {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 42px;
+    padding-bottom: 153px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 76px;
+    padding-bottom: 280px;
+  }
+}
+.conf__title {
+  text-align: center;
+}
+.conf__paragraph {
+  margin-left: 0;
+  margin-right: auto;
+  @media #{$max-mobile-width} {
+    font-size: 1.6rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.4rem;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.6rem;
+  }
+}

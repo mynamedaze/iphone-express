@@ -85,7 +85,9 @@
 .promo__form-field {
   display: flex;
   flex-direction: column;
+  align-items: center;
   @media #{$min-desktop-width} {
+    flex-wrap: wrap;
     flex-direction: row;
     align-self: stretch;
     justify-content: space-between;
@@ -144,7 +146,25 @@
   background-color: $button-color;
   color: $button-text-color;
 }
-
+.promo__conf-field {
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+.promo__conf-text {
+  @media #{$max-mobile-width} {
+    font-size: 1.4rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.2rem;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.4rem;
+  }
+}
+.promo__conf-link {
+  color: #f5d211;
+}
 .promo__call-button {
     background-color: $button-color;
     box-shadow: 0 0 0 4px $button-border-color;

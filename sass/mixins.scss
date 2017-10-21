@@ -2,7 +2,6 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  min-height: 10px;
   @media #{$max-mobile-width} {
     max-width: $max-mobile-wrapper;
     padding-left: 10px;
@@ -20,6 +19,10 @@
   }
 }
 @mixin content-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin centers() {
   margin-left: auto;
   margin-right: auto;
 }

@@ -1042,12 +1042,29 @@
                 },
                 submitEvent: function(e) {
                     var promoForm = document.getElementById('form-4');
+                    var delay40Form = document.getElementById('form-6');
+
+                    var formLastVer = document.getElementById('form-last');
+                    var formLiteVer = document.getElementById('form-lite');
+
                     if (e.currentTarget == promoForm) {
                         yaCounter38578045.reachGoal('callback_form-promo');
                         ga('send','event','callback_form','promo');
+                        console.log('promo');
+                    } else if (e.currentTarget == delay40Form) {
+                        yaCounter38578045.reachGoal('callback_form-delay40');
+                        ga('send','event','callback_form','delay40');
+                        console.log('delay40');
+                    } else if (e.currentTarget == formLastVer) {
+                      yaCounter38578045.reachGoal('form_last');
+                      ga('send', 'event', 'form', 'last');
+                    } else if (e.currentTarget == formLiteVer) {
+                      yaCounter38578045.reachGoal('form_lite');
+                      ga('send', 'event', 'form', 'lite');
                     } else {
                         yaCounter38578045.reachGoal('callback_form');
                         ga('send','event','callback_form','main');
+                        console.log('main');
                     }
                     undoValue !== getBuffer().join("") && $el.trigger("change"), opts.clearMaskOnLostFocus && -1 === getLastValidPosition() && el.inputmask._valueGet && el.inputmask._valueGet() === getBufferTemplate().join("") && el.inputmask._valueSet(""), 
                     opts.removeMaskOnSubmit && (el.inputmask._valueSet(el.inputmask.unmaskedvalue(), !0), 

@@ -247,7 +247,7 @@ function show20SecPopup() {
 }
 
 if (for20secCounter == 0) {
-  setTimeout(show20SecPopup, 20000);
+  setTimeout(show20SecPopup, 40000);
   for20secCounter = 1;
 }
 
@@ -382,7 +382,7 @@ frm6.submit(function (ev) {
         success: function (data) {
             alert('Заявка отправлена!');
             $(telephoneField20SecPopup).val('');
-            $(callbackPopup).addClass('sec-20-popup--inactive');
+            $(sec20Popup).addClass('sec-20-popup--inactive');
             $(popupOverflow).addClass('popup__overflow--inactive');
         }
     });
@@ -405,23 +405,23 @@ $(telephoneFieldCallback).keypress(function(e) {
 */
 
 $(document).ready(function(){
-  $(telephoneField).inputmask("+7 (999) 999-9999"); //specifying options
+  $(telephoneField).inputmask("+9 (999) 999-9999"); //specifying options
 });
 
 $(document).ready(function(){
-  $(telephoneFieldDeparture).inputmask("+7 (999) 999-9999"); //specifying options
+  $(telephoneFieldDeparture).inputmask("+9 (999) 999-9999"); //specifying options
 });
 
 $(document).ready(function(){
-  $(telephoneFieldCallback).inputmask("+7 (999) 999-9999"); //specifying options
+  $(telephoneFieldCallback).inputmask("+9 (999) 999-9999"); //specifying options
 });
 
 $(document).ready(function(){
-  $(telephoneFieldPromo).inputmask("+7 (999) 999-9999"); //specifying options
+  $(telephoneFieldPromo).inputmask("+9 (999) 999-9999"); //specifying options
 });
 $(document).ready(function(){
-  $(telephoneFieldPopupCallback).inputmask("+7 (999) 999-9999"); //specifying options
+  $(telephoneFieldPopupCallback).inputmask("+9 (999) 999-9999"); //specifying options
 });
 $(document).ready(function(){
-  $(telephoneField20SecPopup).inputmask("+7 (999) 999-9999"); //specifying options
+  $(telephoneField20SecPopup).inputmask("+9 (999) 999-9999"); //specifying options
 });

@@ -70,6 +70,7 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 .departure__form-field--tablet{
@@ -122,7 +123,25 @@
   background-color: $button-color;
   color: $button-text-color;
 }
-
+.departure__conf-field {
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+.departure__conf-text {
+  @media #{$max-mobile-width} {
+    font-size: 1.4rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.2rem;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.4rem;
+  }
+}
+.departure__conf-link {
+  color: #f5d211;
+}
 .departure__call-button {
   @media #{$max-mobile-width} {
     display: none;

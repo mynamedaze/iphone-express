@@ -1,5 +1,6 @@
 html {
   font-size: 0.625rem;
+  min-height: 100%;
 }
 img {
   max-width: 100%;
@@ -24,9 +25,10 @@ a {
 body {
   background-color: $bg-main-color;
   font-family: $font-main;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0px;
   color: $text-main-color;
+  min-height: 100%;
 }
 span::-moz-selection {
   background: $button-color;
@@ -154,4 +156,12 @@ button {
 button:focus {
   outline-width: 0;
   border-width: 0;
+}
+.calc-body {
+  min-height: 100%;
+  background: rgb(94,214,172); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(94,214,172,1) 0%, rgba(73,198,225,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(94,214,172,1) 0%,rgba(73,198,225,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(94,214,172,1) 0%,rgba(73,198,225,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ed6ac', endColorstr='#49c6e1',GradientType=0 ); /* IE6-9 */
 }

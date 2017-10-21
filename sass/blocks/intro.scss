@@ -291,10 +291,33 @@
     @include content-center;
   }
   @media #{$min-tablet-width} {
+    flex-wrap: wrap;
     display: flex;
     width: 100%;
     justify-content: space-around;
   }
+}
+.intro__conf-field {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media #{$max-mobile-width} {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+}
+.intro__conf-link {
+  color: #f5d211;
 }
 .intro__form-field--mobile {
   @media #{$max-mobile-width} {
