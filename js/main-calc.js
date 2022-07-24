@@ -300,6 +300,7 @@ frmLast.submit(function (ev) {
         url: frmLast.attr('action'),
         data: frmLast.serialize(),
         success: function (data) {
+              fbq('track', 'Lead');
               console.log('1111');
               $(stage5).fadeOut(500);
 
@@ -322,6 +323,7 @@ frmLite.submit(function (ev) {
         url: frmLite.attr('action'),
         data: frmLite.serialize(),
         success: function (data) {
+            fbq('track', 'Lead');
             alert('Заявка отправлена!');
             $(popupLite).addClass('popup-lite--inactive');
             $(popupOverlay).addClass('popup-overlay--inactive');

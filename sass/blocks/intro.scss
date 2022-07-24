@@ -6,11 +6,12 @@
   @include gradient;
   @media #{$max-mobile-width} {
     margin-top: -130px;
-    background: rgb(94,214,172);
-    background: -moz-linear-gradient(top, rgba(94,214,172,1) 0%, rgba(73,198,225,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(94,214,172,1) 0%,rgba(73,198,225,1) 100%);
-    background: linear-gradient(to bottom, rgba(94,214,172,1) 0%,rgba(73,198,225,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ed6ac', endColorstr='#49c6e1',GradientType=0 );
+    background: rgb(62,208,145);
+    background: -moz-linear-gradient(left, rgba(62,208,145,0.8) 0%, rgba(29,183,228,0.8) 100%), url("../img/broken-display-bg-tablet.jpg");
+    background: -webkit-linear-gradient(left, rgba(62,208,145,0.8) 0%,rgba(29,183,228,0.8) 100%), url("../img/broken-display-bg-tablet.jpg");
+    background: linear-gradient(to right, rgba(62,208,145,0.8) 0%,rgba(29,183,228,0.8) 100%), url("../img/broken-display-bg-tablet.jpg");
+    background-position: center 0;
+    background-size: auto 110%;
   }
   @media #{$min-tablet-width} {
     margin-top: -70px;

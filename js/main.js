@@ -231,6 +231,13 @@ $(zvonilka).click(function() {
   $(popupOverflow).removeClass('popup__overflow--inactive');
 });
 
+var deviceNoCost = document.getElementsByClassName('device-model__break-type-cost--none');
+
+$(deviceNoCost).click(function() {
+  $(callbackPopup).removeClass('callback-popup--inactive');
+  $(popupOverflow).removeClass('popup__overflow--inactive');
+});
+
 $(callbackClose).click(function() {
   $(callbackPopup).addClass('callback-popup--inactive');
   if ($(sec20Popup).hasClass('sec-20-popup--inactive')) {
@@ -297,6 +304,7 @@ frm1.submit(function (ev) {
         url: frm1.attr('action'),
         data: frm1.serialize(),
         success: function (data) {
+            fbq('track', 'Lead');
             alert('Заявка отправлена!');
             $(firstnameField).val('');
             $(telephoneField).val('');
@@ -315,6 +323,7 @@ frm2.submit(function (ev) {
         url: frm2.attr('action'),
         data: frm2.serialize(),
         success: function (data) {
+            fbq('track', 'Lead');
             alert('Заявка отправлена!');
             $(firstnameFieldDeparture).val('');
             $(telephoneFieldDeparture).val('');
@@ -331,6 +340,7 @@ frm3.submit(function (ev) {
         url: frm3.attr('action'),
         data: frm3.serialize(),
         success: function (data) {
+            fbq('track', 'Lead');
             alert('Заявка отправлена!');
             $(firstnameFieldCallback).val('');
             $(telephoneFieldCallback).val('');
@@ -347,6 +357,7 @@ frm4.submit(function (ev) {
         url: frm4.attr('action'),
         data: frm4.serialize(),
         success: function (data) {
+            fbq('track', 'Lead');
             alert('Заявка отправлена!');
             $(firstnameFieldPromo).val('');
             $(telephoneFieldPromo).val('');
@@ -363,6 +374,7 @@ frm5.submit(function (ev) {
         url: frm5.attr('action'),
         data: frm5.serialize(),
         success: function (data) {
+            fbq('track', 'Lead');
             alert('Заявка отправлена!');
             $(telephoneFieldPopupCallback).val('');
             $(callbackPopup).addClass('callback-popup--inactive');
@@ -380,6 +392,7 @@ frm6.submit(function (ev) {
         url: frm6.attr('action'),
         data: frm6.serialize(),
         success: function (data) {
+            fbq('track', 'Lead');
             alert('Заявка отправлена!');
             $(telephoneField20SecPopup).val('');
             $(sec20Popup).addClass('sec-20-popup--inactive');

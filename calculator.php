@@ -476,7 +476,7 @@ if (file_exists($file_counter)) {
           </div>
         </section>
         <section class="step-4">
-          <span class="step-4__2000rems">Мы выполнили свыше 2 000 ремонтов! Акция <strong class="step-4__promo">до 31 августа</strong></span>
+          <span class="step-4__2000rems">Мы выполнили свыше 2 000 ремонтов! Акция <strong class="step-4__promo">до 31 января</strong></span>
           <h3 class="step-4__title">Выберите ваш подарок!</h3>
           <ul class="step-4__bonus-list">
             <li class="step-4__bonus-item">
@@ -487,7 +487,7 @@ if (file_exists($file_counter)) {
                 <input type="radio" class="step-4__bonus-radio  step-4__bonus-radio--charger" name="ubonus" id="charger">
                 <label for="charger" class="step-4__bonus-label-field  step-4__bonus-label-field--charger">
                   <div class="step-4__bonus-label  step-4__bonus-label--charger"></div>
-                  <span class="step-4__bonus-label-text  step-4__bonus-label-text--charger">Оригинальное зарядное устройство</span>
+                  <span class="step-4__bonus-label-text  step-4__bonus-label-text--charger">Сертифицированный кабель зарядки</span>
                 </label>
                 <span class="step-4__bonus-left  step-4__bonus-left--charger">Осталось шт.: <span class="step-4__bonus-left-count  step-4__bonus-left-count--charger">2</span></span>
               </div>
@@ -538,7 +538,7 @@ if (file_exists($file_counter)) {
             </li>
             <li class="step-5__item  step-5__item--right">
               <form action="mail-calc.php" method="post" class="step-5__callback-form" id="form-last" name="last-form">
-                <span class="step-5__free-sms">Получите бесплатное SMS с расчетом стоимости и забронируйте ваш подарок!</span>
+                <span class="step-5__free-sms">Получите бесплатный расчёт стоимости и забронируйте ваш подарок!</span>
                 <span class="step-5__enter-tel">Введите ваш телефон</span>
                 <input type="tel" name="utel" class="step-5__input-tel" id="telephone-field-last" placeholder="Телефон (обязательно)" required>
                 <input type="text" name="udevice-type" id="input-device-type" class="visually-hidden">
@@ -598,10 +598,8 @@ if (file_exists($file_counter)) {
   <script type="text/javascript" src="/js/jquery.inputmask.bundle.js"></script>
   <script type="text/javascript" src="/js/main-calc.js"></script>
   <!-- CODE FOR leads-telegram.ru -->
-  <script type="text/javascript">
-    var telegram_leads_code = false;
-  </script>
-  <script src="//leads-telegram.ru/js/telegram_leads.min.js"></script>
+  <script type="text/javascript">var telegram_leads_code = '071c30a6f42e0e5a1e5fe0fbc3bf306d';</script> 
+  <script src="//leads-telegram.ru/js/telegram_leads.min.js"></script> 
   <!-- END CODE FOR leads-telegram.ru -->
   <!-- Begin Me-Talk -->
 <script type='text/javascript'>

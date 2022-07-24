@@ -31,7 +31,7 @@ $bonusType = trim($bonusType);
 //echo "<br>";
 //echo $telephone;
 if(!empty($_POST['utel'])){
-  mail("iphone.exp@yandex.ru", "Заявка на ремонт с калькулятора. IPHONE-EXPRESS.", "Имя: ".$name."\n Телефон: ".$telephone."\n Устройство: ".$deviceType."\n Модель: ".$deviceModel."\n Поломка: ".$brokenType."\n Подарок: ".$bonusType ,"From: iphone.exp@yandex.ru \r\n");
+  mail("iphone.exp24@gmail.com", "Заявка на ремонт с калькулятора. IPHONE-EXPRESS.", "Имя: ".$name."\n Телефон: ".$telephone."\n Устройство: ".$deviceType."\n Модель: ".$deviceModel."\n Поломка: ".$brokenType."\n Подарок: ".$bonusType ,"From: iphone.exp24@gmail.com \r\n");
 
   //$post_data = array();
 

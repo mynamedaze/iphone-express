@@ -223,6 +223,9 @@
     margin-left: -1px;
   }
 }
+/*меняем порядок поломок для таблеток и десктопа*/
+
+/* */
 .device-model__break-link {
   display: flex;
   justify-content: space-between;
@@ -279,6 +282,12 @@
     top: 5px;
     right: -9px;
   }
+}
+.device-model__break-type-cost--none {
+  cursor: pointer;
+}
+.device-model__break-type-cost--none::after {
+  display: none;
 }
 .device-model__not-found {
   text-align: center;

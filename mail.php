@@ -10,7 +10,7 @@ $telephone = trim($telephone);
 //echo $firstname;
 //echo "<br>";
 //echo $telephone;
-mail("iphone.exp@yandex.ru", "Заявка на ремонт. Iphone Express.", "ФИО:".$firstname.". Телефон: ".$telephone ,"From: iphone.exp@yandex.ru \r\n");
+mail("iphone.exp24@gmail.com", "Заявка на ремонт. Iphone Express.", "ФИО:".$firstname.". Телефон: ".$telephone ,"From: iphone.exp24@gmail.com \r\n");
 
 //$post_data = array();
 
